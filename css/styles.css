@@ -221,28 +221,14 @@ ul li {
   }
 }
 @media only screen and (max-width: 767px) {
-  .carousel-item .card {
-    border: 1px solid #878C91;
-  }
+  
 }
 
 @media only screen and (max-width: 415px) {
-  /* .clickable-section-circle {
-    height: 30px;
-    width: 30px;
-    padding: 5px 0;
-    border: 2px solid #000;
-  } */
   .content .content-body img {
     transform: scale(1.25);
     margin-top: 30px;
   }
-  /* .clickable-section-circle {
-    height: 35px;
-    width: 35px;
-    padding: 4px 0;
-    border: 2px solid #000;
-  } */
   .clickable-section-circle.chest {
     top: 23%;
     left: 32%;
@@ -281,5 +267,10 @@ ul li {
   }
 }
 @media only screen and (max-width: 375px) {
-  
+
+}
+@media only screen and (max-width: 320px) {
+  .nav .nav-item a {
+    font-size: 14px;
+  }
 }
