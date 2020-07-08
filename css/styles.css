@@ -93,6 +93,9 @@ ul li {
 .carousel-item .card .card-body .card-body-right {
   width: 50%;
 }
+.carousel-item .card .card-body .card-body-right {
+  padding-top: 38px;
+}
 .carousel-item .card .card-body .card-body-right .benfits-list li {
   list-style: inherit;
 }
@@ -420,6 +423,16 @@ ul li {
 @media only screen and (max-width: 568px) {
   .nav.nav-tabs {
     margin-bottom: 30px;
+  }
+  .carousel-item .card .card-body .card-body-inner {
+    flex-direction: column;
+  }
+  .carousel-item .card .card-body .card-body-left,
+  .carousel-item .card .card-body .card-body-right {
+    width: 100%;
+  }
+  .carousel-item .card .card-body .card-body-right ul {
+    padding: 0 0 0 20px;
   }
   .content_1 .on-body img {
     transform: scale(2);
