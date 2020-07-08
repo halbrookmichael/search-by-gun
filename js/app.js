@@ -5,6 +5,7 @@ $(document).ready(function() {
 			holsterClass: 'chest',
 			class: 'active',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Chest',
 			btnLink: '',
 			isOnBody: true
@@ -14,6 +15,7 @@ $(document).ready(function() {
 			holsterClass: 'shoulder',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
 			btnLabel: 'Shop Shoulder',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLink: '',
 			isOnBody: true
 		},
@@ -21,6 +23,7 @@ $(document).ready(function() {
 			holster: 'belly',
 			holsterClass: 'belly',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Belly',
 			btnLink: '',
 			isOnBody: true
@@ -29,6 +32,7 @@ $(document).ready(function() {
 			holster: 'appendix',
 			holsterClass: 'appendix',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Appendix',
 			btnLink: '',
 			isOnBody: true
@@ -37,6 +41,7 @@ $(document).ready(function() {
 			holster: 'pocket',
 			holsterClass: 'pocket',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Pocket',
 			btnLink: '',
 			isOnBody: true
@@ -45,6 +50,7 @@ $(document).ready(function() {
 			holster: 'ankle',
 			holsterClass: 'ankle',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Ankle',
 			btnLink: '',
 			isOnBody: true
@@ -54,6 +60,7 @@ $(document).ready(function() {
 			holsterClass: 'owb',
 			text: 'OWB',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Outside the Wasitband',
 			btnLink: '',
 			isOnBody: true
@@ -63,6 +70,7 @@ $(document).ready(function() {
 			holsterClass: 'iwb',
 			text: 'IWB',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Inside the Waistband',
 			btnLink: '',
 			isOnBody: true
@@ -71,6 +79,7 @@ $(document).ready(function() {
 			holster: 'drop-leg',
 			holsterClass: 'drop-leg',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Drop-Leg',
 			btnLink: '',
 			isOnBody: true
@@ -81,24 +90,28 @@ $(document).ready(function() {
 		{
 			holster: 'Home Holsters',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Home Holsters',
 			btnLink: ''
 		},
 		{
 			holster: 'Vehicle Holsters',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable',	'Low-Profile'],
 			btnLabel: 'Shop Vehicle Holsters',
 			btnLink: ''
 		},
 		{
 			holster: 'Backpack Holsters',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Backpack Holsters',
 			btnLink: ''
 		},
 		{
 			holster: 'Accessories',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
+			benefit: ['Comfortable', 'Low-Profile'],
 			btnLabel: 'Shop Accessories',
 			btnLink: ''
 		},
@@ -138,8 +151,10 @@ $(document).ready(function() {
 
 			onSectionClick(elTargetClass);
 
-			if(elTargetClass.includes('change-holster'))
+			if(elTargetClass.includes('change-holster')) {
+				el.preventDefault();
 				$('#onBodyCarousel').carousel(0);
+			}
 		}
 	});
 	$(window).resize(function() {
@@ -164,7 +179,7 @@ $(document).ready(function() {
 				removeAllChildNodes(contentParent);
 				updatePageView(currentLayout);
 				$('#onBodyCarousel').on('slide.bs.carousel', function (e) {
-					enableSlideControls(e.to);
+					enableSlideControls(e.to, currentLayout);
 				});
 			}
 		}
@@ -273,7 +288,7 @@ $(document).ready(function() {
 												<div class="carousel-inner">
 													${addHolsterCards(carouselCardsOnBody)}
 												</div>
-												<div class="on-body-controls">
+												<div class="on-body-controls inactive">
 													<a class="carousel-control-prev" href="#onBodyCarousel" role="button" data-slide="prev">
 													<i class="fa fa-chevron-left" aria-hidden="true"></i>
 														<span class="sr-only">Previous</span>
@@ -345,17 +360,33 @@ $(document).ready(function() {
 				<div class="card">
 					<img src="img/card-img.png" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title">${carouselCards[i].holster}</h5>
-						<p class="card-text">${carouselCards[i].infoText}</p>
+						<div class="card-body-inner">
+							<div class="card-body-left">
+								<h5 class="card-title">${carouselCards[i].holster}</h5>
+								<p class="card-text">${carouselCards[i].infoText}</p>
+							</div>
+							<div class="card-body-right">
+								<ul class="benfits-list">
+									${addHolsterBenefits(carouselCards[i].benefit)}
+								</ul>
+							</div>
+						</div>
 						<div class="btn-container">
-							${carouselCards[i].isOnBody ? `<a href="#" class="btn btn-primary change-holster">Select New Holster</a>` : ''}
+							${(carouselCards[i].isOnBody && currentLayout == 'mobile') ? `<a class="btn btn-primary change-holster">Select New Holster</a>` : ''}
 							<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
 						</div>
 					</div>
 				</div>
-			</div>`
+			</div>`;
 		}
 		return cards;
+	}
+	function addHolsterBenefits(carouselCardsBenefits) {
+		let benefits = '';
+		for(let i = 0; i < carouselCardsBenefits.length; i ++) {
+			benefits +=	`<li>${carouselCardsBenefits[i]}</li>`;
+		}
+		return benefits;
 	}
 	function append(pageContent) {
 		$(contentParent).append(pageContent);
@@ -364,6 +395,7 @@ $(document).ready(function() {
 
 		
 		if(currentLayout == 'desktop') {
+			$('.clickable-section-circle.iwb').addClass('active');
 			updateClickedSection('.iwb', '#onBodyCarousel', 7);
 			updateClickedSection('.icon-container.home-carry', '#offBodyCarousel', 0);
 			$('#content').addClass('container');
@@ -470,8 +502,8 @@ $(document).ready(function() {
 		$('.clickable-section-circle').removeClass('active');
 		$('.icon-container').removeClass('active');
 	}
-	function enableSlideControls(slide) {
-		if(slide != 0)
+	function enableSlideControls(slide, currentLayout) {
+		if(slide != 0 && currentLayout == 'mobile')
 			$('.on-body-controls').removeClass('inactive');
 		else {
 			$('.on-body-controls').addClass('inactive');

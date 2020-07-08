@@ -25,7 +25,7 @@ ul li {
 #search-by-gun .section-header {
   margin-bottom: 30px;
 }
-#search-by-gun .section-header  h1{
+#search-by-gun .section-header  h1 {
   font-size: 21px;
   color: #2C3136;
   font-weight: bold;
@@ -68,7 +68,6 @@ ul li {
 
 /* Carousel */
 .carousel-inner {
-  padding: 0 40px;
   margin: 0 auto;
 }
 /* Carousel item card */
@@ -80,18 +79,27 @@ ul li {
   font-size: 21px;
   font-weight: bold;
   text-transform: capitalize;
-  margin: 15px 0;
+  margin: 0 0 15px;
 }
 .carousel-item .card .card-body {
-  padding: 0 16px;
+  padding: 20px 16px 0;
+}
+.carousel-item .card .card-body .card-body-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.carousel-item .card .card-body .card-body-left,
+.carousel-item .card .card-body .card-body-right {
+  width: 50%;
+}
+.carousel-item .card .card-body .card-body-right .benfits-list li {
+  list-style: inherit;
 }
 .carousel-item .card .card-body .btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  width: 50%;
   margin-bottom: 10px;
+  float: right;
 }
 .carousel-item .card .card-body .btn-container a {
   font-size: 16px;
@@ -99,6 +107,14 @@ ul li {
   width: 100%;
   background-color: #000;
   border-color: #000;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.carousel-item .card .card-body .btn-container a:hover {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+  transition: all 0.3s ease;
 }
 .carousel-item .card .card-body .btn-container a:first-of-type {
   margin-bottom: 10px;
@@ -110,20 +126,20 @@ ul li {
 }
 .on-body-controls a.carousel-control-prev,
 .off-body-controls a.carousel-control-prev {
-  left: -20px;
+  left: -40px;
 }
 .on-body-controls a.carousel-control-next,
 .off-body-controls a.carousel-control-next  {
-  right: -20px;
+  right: -40px;
 }
 .on-body-controls a.carousel-control-prev:hover,
 .off-body-controls a.carousel-control-prev:hover {
-  left: -25px;
+  left: -45px;
   transition: all 0.3s ease;
 }
 .on-body-controls a.carousel-control-next:hover,
 .off-body-controls a.carousel-control-next:hover {
-  right: -25px;
+  right: -45px;
   transition: all 0.3s ease;
 }
 /* Content */
@@ -137,6 +153,7 @@ ul li {
 /* Content on-body */
 .content_1 .on-body {
   position: relative;
+  margin-bottom: 160px;
 }
 .content_1 .on-body img {
   height: auto;
@@ -219,12 +236,18 @@ ul li {
   justify-content: center;
   height: 100%;
   width: 25%;
+  transition: all 0.3s ease;
 }
 .content_2 .off-body-container .icon-container img {
   height: auto;
   width: 60%;
   margin-bottom: 30px;
   pointer-events: none;
+}
+.content_2 .off-body-container .icon-container:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  transition: all 0.3s ease;
 }
 .content_2 .off-body-container .icon-container  p {
   font-size: 16px;
