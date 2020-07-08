@@ -30,10 +30,11 @@ ul li {
 }
 .navbar .navbar-nav {
   justify-content: space-between;
-  padding: 5px 75px;
+  padding: 5px 90px;
   background-color: rgb(81, 81, 81);
   text-transform: uppercase;
   font-weight: bold;
+  width: 100%;
 }
 /* Section & container */
 #search-by-gun {
