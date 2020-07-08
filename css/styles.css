@@ -273,8 +273,6 @@ ul li {
 }
 .content_2 .off-body-container .icon-container:hover {
   cursor: pointer;
-  transform: scale(1.15);
-  transition: all 0.3s ease;
 }
 .content_2 .off-body-container .icon-container  p {
   font-size: 16px;
