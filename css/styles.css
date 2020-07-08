@@ -8,9 +8,32 @@ ul li {
 }
 
 /* Nav */
+.navbar {
+  flex-direction: column;
+  padding: 0;
+}
+.navbar .upper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #000;
+  padding: 10px 50px;
+}
 .navbar .navbar-brand img {
   max-width: 150px;
   height: auto;
+}
+.navbar .collapse.navbar-collapse {
+  justify-content: center;
+  width: 100%;
+  
+}
+.navbar .navbar-nav {
+  justify-content: space-between;
+  padding: 5px 75px;
+  background-color: rgb(81, 81, 81);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 /* Section & container */
 #search-by-gun {
