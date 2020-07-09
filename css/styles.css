@@ -41,13 +41,14 @@ ul li {
 .navbar {
   flex-direction: column;
   padding: 0;
+  background-color: #000;
 }
 .navbar .upper {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: #000;
-  padding: 10px 50px;
+  padding: 10px 20px;
+  max-width: 1200px;
 }
 .navbar .navbar-brand img {
   max-width: 150px;
@@ -56,15 +57,15 @@ ul li {
 .navbar .collapse.navbar-collapse {
   justify-content: center;
   width: 100%;
-  
+  background-color: rgb(81, 81, 81);
 }
 .navbar .navbar-nav {
   justify-content: space-between;
-  padding: 5px 90px;
-  background-color: rgb(81, 81, 81);
+  padding: 5px 20px;
   text-transform: uppercase;
   font-weight: bold;
   width: 100%;
+  max-width: 1200px;
 }
 /* Section & container */
 #search-by-gun {
@@ -73,7 +74,7 @@ ul li {
 #search-by-gun .container {
   max-width: 1200px;
   width: 100%;
-  padding: 0 70px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 #search-by-gun .section-header {
@@ -151,8 +152,11 @@ ul li {
 .carousel-item .card .card-body {
   padding: 20px 0;
 }
-.carousel-item .card .card-body .read-more {
+.carousel-item .card .read-more {
   display: none;
+}
+.carousel-item .card .read-more:hover {
+  cursor: pointer;
 }
 .carousel-item .card .card-body .card-body-inner {
   display: flex;
@@ -383,10 +387,10 @@ ul li {
   }
   #onBodyCarousel .carousel-inner .card .img-container,
   #offBodyCarousel .carousel-inner .card .img-container {
-    height: 145px;
+    height: 225px;
   }
   .carousel-item .card .card-body {
-    padding: 16px 16px 0;
+    padding: 16px 16px;
   }
   .clickable-area {
     max-height: 100%;
@@ -511,6 +515,24 @@ ul li {
     right: 32%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .on-body-controls a.carousel-control-prev, 
+  .off-body-controls a.carousel-control-prev {
+    left: -20px;
+  }
+  .on-body-controls a.carousel-control-next, 
+  .off-body-controls a.carousel-control-next {
+    right: -20px;
+  }
+  .on-body-controls a.carousel-control-prev:hover, 
+  .off-body-controls a.carousel-control-prev:hover {
+    left: -25px;
+  }
+  .on-body-controls a.carousel-control-next:hover, 
+  .off-body-controls a.carousel-control-next:hover {
+    right: -25px;
+  }
+}
 /* Mobile */
 @media only screen and (max-width: 568px) {
   #search-by-gun .container {
@@ -533,6 +555,10 @@ ul li {
   #offBodyCarousel .carousel-inner .card  {
     padding-bottom: 16px;
   }
+  #onBodyCarousel .carousel-inner .card .img-container,
+  #offBodyCarousel .carousel-inner .card .img-container {
+    height: 145px;
+  }
   .carousel-item .card .img-container {
     background-position: center center !important;
   }
@@ -541,7 +567,7 @@ ul li {
   }
   .carousel-item .card .card-body {
     flex-direction: column;
-    max-height: 250px;
+    max-height: 200px;
     overflow: hidden;
     padding-bottom: 16px;
     transition:  max-height 0.3s ease-out;
@@ -637,19 +663,19 @@ ul li {
   }
   .on-body-controls a.carousel-control-prev,
   .off-body-controls a.carousel-control-prev {
-    left: -15px;
+    left: -25px;
   }
   .on-body-controls a.carousel-control-next,
   .off-body-controls a.carousel-control-next  {
-    right: -15px;
+    right: -25px;
   }
   .on-body-controls a.carousel-control-prev:hover,
   .off-body-controls a.carousel-control-prev:hover {
-    left: -10px;
+    left: -25px;
   }
   .on-body-controls a.carousel-control-next:hover,
   .off-body-controls a.carousel-control-next:hover {
-    right: -10px;
+    right: -25px;
   }
 }
 @media only screen and (max-width: 375px) {

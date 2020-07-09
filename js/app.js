@@ -407,7 +407,7 @@ $(document).ready(function() {
 												</div>
 											</div>
 										</div>
-										${width <= 568 ? `<p class="read-more">Read More</p>` : ''}
+										<p class="read-more">Read More</p>
 										<div class="btn-container">
 											<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
 											${(carouselCards[i].isOnBody && currentLayout == 'mobile') ? `<a class="change-holster"><i class="fa fa-chevron-left" aria-hidden="true"></i>  Find Your Carry</a>` : ''}
