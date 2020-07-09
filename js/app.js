@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	const carouselCardsOnBody = [
 		{
-			img: '../img/card/chest.jpg',
+			img: './img/card/chest.jpg',
 			alt: '',
 			imgY: '-125px',
 			holster: 'chest',
@@ -14,7 +14,7 @@ $(document).ready(function() {
 			isOnBody: true
 		},
 		{
-			img: '../img/card/shoulder.jpg',
+			img: './img/card/shoulder.jpg',
 			alt: '',
 			imgY: '-105px',
 			holster: 'shoulder',
@@ -26,11 +26,12 @@ $(document).ready(function() {
 			isOnBody: true
 		},
 		{
-			img: '',
+			img: './img/card/belly.jpg',
 			alt: '',
 			imgY: 0,
 			holster: 'belly',
 			holsterClass: 'belly',
+			imgClass: 'belly-img',
 			infoText: 'Belly band holsters wrap around the waist or lower abdomen, allowing for easy concealment with almost any clothing without requiring a belt. While certainly convenient, care must be taken to select a belly band that securely holds the firearm. Lesser quality designs use flimsy cloth pockets with elastic retention straps, which are barely sufficient for anything less than a micro pistol and often need replacement every few months. Quality belly bands, however, last for years and are comfortable and secure enough to be a viable carry method.',
 			benefit: ['Durable nylon band holds securely, and neoprene padding keeps you comfortable', 'Mounting loops allow use with any Alien Gear Holsters IWB for secure carry', 'Sized for proper fit to firearm instead of "one-size-fits-all" design'],
 			btnLabel: 'Shop Belly Holsters',
@@ -38,7 +39,7 @@ $(document).ready(function() {
 			isOnBody: true
 		},
 		{
-			img: '../img/card/appendix.jpg',
+			img: './img/card/appendix.jpg',
 			alt: '',
 			imgY: '-60px',
 			holster: 'appendix',
@@ -50,7 +51,7 @@ $(document).ready(function() {
 			isOnBody: true
 		},
 		{
-			img: '../img/card/pocket.jpg',
+			img: './img/card/pocket.jpg',
 			alt: '',
 			imgY: '-80px',
 			holster: 'pocket',
@@ -62,7 +63,7 @@ $(document).ready(function() {
 			isOnBody: true
 		},
 		{
-			img: '../img/card/ankle.jpg',
+			img: './img/card/ankle.jpg',
 			alt: '',
 			imgY: 0,
 			holster: 'ankle',
@@ -74,7 +75,7 @@ $(document).ready(function() {
 			isOnBody: true
 		},
 		{
-			img: '../img/card/owb.jpg',
+			img: './img/card/owb.jpg',
 			alt: '',
 			imgY: '-80px',
 			holster: 'outside the waistband',
@@ -87,7 +88,7 @@ $(document).ready(function() {
 			isOnBody: true
 		},
 		{
-			img: '../img/card/iwb.jpg',
+			img: './img/card/iwb.jpg',
 			alt: '',
 			imgY: '-68px',
 			imgYMobile: '-68px',
@@ -101,7 +102,7 @@ $(document).ready(function() {
 			isOnBody: true
 		},
 		{
-			img: '../img/card/leg.jpg',
+			img: './img/card/leg.jpg',
 			alt: '',
 			imgY: '-100px',
 			holster: 'drop-leg',
@@ -116,7 +117,7 @@ $(document).ready(function() {
 
 	const carouselCardsOffBody = [
 		{
-			img: '../img/card/home-defense.jpg',
+			img: './img/card/home-defense.jpg',
 			alt: '',
 			imgY: '-110px',
 			holster: 'Home Holsters',
@@ -126,7 +127,7 @@ $(document).ready(function() {
 			btnLink: ''
 		},
 		{
-			img: '../img/card/vehicle.jpg',
+			img: './img/card/vehicle.jpg',
 			alt: '',
 			imgY: '-80px',
 			holster: 'Vehicle Holsters',
@@ -136,7 +137,7 @@ $(document).ready(function() {
 			btnLink: ''
 		},
 		{
-			img: '../img/card/backpack.jpg',
+			img: './img/card/backpack.jpg',
 			alt: '',
 			imgY: '-75px',
 			holster: 'Backpack Holsters',
@@ -146,7 +147,7 @@ $(document).ready(function() {
 			btnLink: ''
 		},
 		{
-			img: '../img/card/molle.jpg',
+			img: './img/card/molle.jpg',
 			alt: '',
 			imgY: '-75px',
 			holster: 'MOLLE',
@@ -392,7 +393,7 @@ $(document).ready(function() {
 		for(let i = 0; i < carouselCards.length; i ++) {
 			cards += `<div class="carousel-item ${carouselCards[i].class && width >= 767 ? carouselCards[i].class : ''}">
 									<div class="card">
-										<div class="img-container" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgY};"></div>
+										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgY};"></div>
 										<div class="card-body">
 											<div class="card-body-inner">
 												<div class="card-body-left">
