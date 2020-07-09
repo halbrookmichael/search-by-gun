@@ -108,7 +108,7 @@ $(document).ready(function() {
 			holster: 'drop-leg',
 			holsterClass: 'drop-leg',
 			infoText: 'Drop leg holsters locate the firearm on the upper thigh, giving the user fast access if needed but freeing up the belt.  By providing the user ability for more dynamic movements, it\'s the perfect open carry solution for range days, hiking, tactical training and more. Firearm safety during these kinds of activities is extremely important so users should avoid holsters with soft shells and one-size-fits-all designs.',
-			benefit: ['Custom-molded retention shell retains firearm securely and draws smoothly', '⦁	Elastic leg straps with high-traction lining for comfortable, secure fit', 'Gun and mag carrier compatible'],
+			benefit: ['Custom-molded retention shell retains firearm securely and draws smoothly', 'Elastic leg straps with high-traction lining for comfortable, secure fit', 'Gun and mag carrier compatible'],
 			btnLabel: 'Shop Drop-Leg Holsters',
 			btnLink: '',
 			isOnBody: true
