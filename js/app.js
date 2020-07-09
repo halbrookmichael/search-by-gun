@@ -200,7 +200,7 @@ $(document).ready(function() {
 			}
 
 			if(elTargetClass.includes('read-more'))
-				toggleReadMore(elTarget);
+				toggleReadMore(elTarget, false);
 		}
 	});
 	$(window).resize(function() {
@@ -225,7 +225,11 @@ $(document).ready(function() {
 				removeAllChildNodes(contentParent);
 				updatePageView(currentLayout);
 				$('#onBodyCarousel').on('slide.bs.carousel', function (e) {
+					toggleReadMore(null, true)
 					enableSlideControls(e.to, currentLayout);
+				});
+				$('#offBodyCarousel').on('slide.bs.carousel', function (e) {
+					toggleReadMore(null, true)
 				});
 			}
 		}
@@ -280,7 +284,7 @@ $(document).ready(function() {
 											<div class="content content_2">
 												<div class="off-body-container">
 													<div class="icon-container home-carry">
-														<img src="./img/icon/home-carry.png" alt="">
+														<img src="./img/icons/home-carry.png" alt="">
 														<p>Home Defense</p>
 													</div>
 													<div class="icon-container vehicle-carry">
@@ -292,7 +296,7 @@ $(document).ready(function() {
 														<p>Backpack Carry</p>
 													</div>
 													<div class="icon-container accessories">
-														<img src="./img/icons/accessories.png" alt="">
+														<img src="./img/icons/molle-carry.png" alt="">
 														<p>MOLLE Carry</p>
 													</div>
 												</div>
@@ -359,7 +363,7 @@ $(document).ready(function() {
 													<p>Backpack Carry</p>
 												</div>
 												<div class="icon-container accessories">
-													<img src="./img/icons/accessories.png" alt="">
+													<img src="./img/icons/molle-carry.png" alt="">
 													<p>MOLLE Carry</p>
 												</div>
 											</div>
@@ -529,14 +533,18 @@ $(document).ready(function() {
 			$('.off-body-tab').parent().addClass('active');
 		}
 	}
-	function toggleReadMore(readMoreTarget) {
-		$(readMoreTarget).parent().toggleClass('more-active');
+	function toggleReadMore(readMoreTarget, closeAll) {
+		if(closeAll)
+			$('.card').removeClass('more-active');
+		
+		if(readMoreTarget != null) {
+			$(readMoreTarget).parent().toggleClass('more-active');
 
-		if($(readMoreTarget).parent().hasClass('more-active'))
-			$(readMoreTarget).text('Read Less');
-		else
-		$(readMoreTarget).text('Read More');
-
+			if($(readMoreTarget).parent().hasClass('more-active'))
+				$(readMoreTarget).text('Read Less');
+			else
+				$(readMoreTarget).text('Read More');
+		}
 	}
 	function removeAllClickedItems() {
 		$('.clickable-section-circle').removeClass('active');
