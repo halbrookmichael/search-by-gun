@@ -663,19 +663,19 @@ ul li {
   }
   .on-body-controls a.carousel-control-prev,
   .off-body-controls a.carousel-control-prev {
-    left: -25px;
+    left: -15px;
   }
   .on-body-controls a.carousel-control-next,
   .off-body-controls a.carousel-control-next  {
-    right: -25px;
+    right: -15px;
   }
   .on-body-controls a.carousel-control-prev:hover,
   .off-body-controls a.carousel-control-prev:hover {
-    left: -25px;
+    left: -15px;
   }
   .on-body-controls a.carousel-control-next:hover,
   .off-body-controls a.carousel-control-next:hover {
-    right: -25px;
+    right: -15px;
   }
 }
 @media only screen and (max-width: 375px) {
