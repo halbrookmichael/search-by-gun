@@ -558,6 +558,9 @@ ul li {
   .navbar .upper .navbar-toggler {
     padding: 0;
   }
+  #search-by-gun .section-header p {
+    font-size: 14px;
+}
   .nav.nav-tabs {
     margin-bottom: 30px;
   }
