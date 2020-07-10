@@ -337,6 +337,15 @@ ul li {
 .inactive {
   display: none;
 }
+.fixed {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  background-color: rgba(255, 255, 255, .8);
+  left: 0;
+  z-index: 100;
+  bottom: 0;
+}
 /* clickable area height updates */
 @media only screen and (max-width: 1180px) {
   .clickable-area {
@@ -459,6 +468,7 @@ ul li {
     text-align: center;
     width: 100%;
     padding: 0 16px;
+    float: none;
   }
   .carousel-item .card .btn-container .change-holster {
     font-size: 14px;
@@ -572,6 +582,10 @@ ul li {
     padding-bottom: 16px;
     transition:  max-height 0.3s ease-out;
   }
+  /* #onBodyCarousel .carousel-inner .card.more-active,
+  #offBodyCarousel .carousel-inner .card.more-active {
+    margin: 0 auto 80px;
+  } */
   .carousel-item .card.more-active .card-body {
     max-height: 500px;
     transition:  max-height 0.3s ease-in;
@@ -803,7 +817,7 @@ ul li {
     bottom: 5%;
 }
   #onBodyCarousel .carousel-inner {
-    padding: 0 20px 90px;
+    padding: 0 20px;
     margin-bottom: 10px;
   }
   .content_1 .on-body img {

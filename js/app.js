@@ -45,7 +45,7 @@ $(document).ready(function() {
 			holster: 'appendix',
 			holsterClass: 'appendix',
 			infoText: 'Appendix holsters are a type of IWB (inside the waistband) holster, but are optimized for being carried in front of the body. Appendix carry has gained a lot of popularity in recent years, and for good reasons. Access is fast, and with the right holster and gun for the right person, appendix carry is very comfortable. Some people find it doesn\'t work for them based on body type and their typical sitting position, but those that do tend to prefer appendix carry to any other method of concealed carry.',
-			benefit: ['Maximum comfort provided by our CoolVent Neoprene backer', '⦁	Single holster clip for secure connection and minimal footprint', '⦁	Secure retention with custom-molded holster shell'],
+			benefit: ['Maximum comfort provided by our CoolVent Neoprene backer', 'Single holster clip for secure connection and minimal footprint', 'Secure retention with custom-molded holster shell'],
 			btnLabel: 'Shop Appendix Holsters',
 			btnLink: '',
 			isOnBody: true
@@ -122,7 +122,7 @@ $(document).ready(function() {
 			imgY: '-110px',
 			holster: 'Home Holsters',
 			infoText: 'A holster mount is used to attach a holster to a desired surface. There are a number of different methods, including the use hook and loop fabric, hard mounts that are drilled into a surface, and less invasive systems that use straps. In all cases, make sure to use a holster that offers adequate trigger guard protection and sufficient retention so the firearm is securely held in the holster.',
-			benefit: ['Multiple mounting systems for choice of attachment to chosen surface', '⦁	Custom-molded retention shells for secure retention', 'Non-hardware options available'],
+			benefit: ['Multiple mounting systems for choice of attachment to chosen surface', 'Custom-molded retention shells for secure retention', 'Non-hardware options available'],
 			btnLabel: 'Shop Home Holsters',
 			btnLink: ''
 		},
@@ -407,10 +407,12 @@ $(document).ready(function() {
 												</div>
 											</div>
 										</div>
-										<p class="read-more">Read More</p>
-										<div class="btn-container">
-											<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
-											${(carouselCards[i].isOnBody && currentLayout == 'mobile') ? `<a class="change-holster"><i class="fa fa-chevron-left" aria-hidden="true"></i>  Find Your Carry</a>` : ''}
+										<div class="fixed-container">
+											<p class="read-more">Read More</p>
+											<div class="btn-container">
+												<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
+												${(carouselCards[i].isOnBody && currentLayout == 'mobile') ? `<a class="change-holster"><i class="fa fa-chevron-left" aria-hidden="true"></i>  Find Your Carry</a>` : ''}
+											</div>
 										</div>
 									</div>
 								</div>`;
@@ -535,17 +537,56 @@ $(document).ready(function() {
 		}
 	}
 	function toggleReadMore(readMoreTarget, closeAll) {
+		let currentCard = $(readMoreTarget).parent().parent();
+
 		if(closeAll)
 			$('.card').removeClass('more-active');
 		
 		if(readMoreTarget != null) {
-			$(readMoreTarget).parent().toggleClass('more-active');
+			$(currentCard).toggleClass('more-active');
 
-			if($(readMoreTarget).parent().hasClass('more-active'))
+			if($(currentCard).hasClass('more-active'))
 				$(readMoreTarget).text('Read Less');
 			else
 				$(readMoreTarget).text('Read More');
+
+			stickyBtnContainer(readMoreTarget)
 		}
+	}
+	function stickyBtnContainer(readMoreTarget) {
+		let container = readMoreTarget.parentElement;
+		let card = readMoreTarget.parentElement.parentElement;
+		
+		container.classList.toggle('fixed');
+		
+		console.log(readMoreTarget.parentElement);
+		
+		$(window).scroll(function() {
+			const lg = 812;
+			const md = 667;
+			const sm = 568;
+			let y = window.scrollY;
+			let h = window.innerHeight;
+			let space = window.innerHeight - container.offsetTop;
+			let cardSpace = window.innerHeight - card.offsetTop;
+		
+			console.log('Distance from bottom = ', space)
+			console.log('Card = ', cardSpace);
+			console.log('scrollY = ', y);
+			console.log('height = ', h);
+
+			if(y >= 0 && !card.classList.contains('more-active'))
+				container.classList.remove('fixed');
+			else if(y >= 200 && h == lg) 
+				container.classList.remove('fixed');
+			else if(y >= 300 && h == md)
+				container.classList.remove('fixed');
+			else if(y >= 500 && h == sm)
+				container.classList.remove('fixed');
+			else
+				container.classList.add('fixed');
+
+		});	
 	}
 	function removeAllClickedItems() {
 		$('.clickable-section-circle').removeClass('active');
