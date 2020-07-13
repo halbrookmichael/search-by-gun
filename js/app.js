@@ -388,8 +388,6 @@ $(document).ready(function() {
 		let cards = '';
 		let width = $(window).width();
 
-		console.log(width)
-
 		for(let i = 0; i < carouselCards.length; i ++) {
 			cards += `<div class="carousel-item ${carouselCards[i].class && width >= 767 ? carouselCards[i].class : ''}">
 									<div class="card">
@@ -560,8 +558,6 @@ $(document).ready(function() {
 		
 		container.classList.toggle('fixed');
 		
-		console.log(readMoreTarget.parentElement);
-		
 		$(window).scroll(function() {
 			const lg = 812;
 			const md = 667;
@@ -570,11 +566,6 @@ $(document).ready(function() {
 			let h = window.innerHeight;
 			let space = window.innerHeight - container.offsetTop;
 			let cardSpace = window.innerHeight - card.offsetTop;
-		
-			console.log('Distance from bottom = ', space)
-			console.log('Card = ', cardSpace);
-			console.log('scrollY = ', y);
-			console.log('height = ', h);
 
 			if(y >= 0 && !card.classList.contains('more-active'))
 				container.classList.remove('fixed');
@@ -605,9 +596,8 @@ $(document).ready(function() {
 		}	
 	}
 	function removeAllChildNodes(parent) {
-		console.log('called')
     while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
+      parent.removeChild(parent.firstChild);
     }
 	}
 });
