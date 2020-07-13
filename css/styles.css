@@ -546,6 +546,12 @@ ul li {
   .content_2 .off-body-container .icon-container img {
     width: 25%;
   }
+  .content_2 .off-body-container .icon-container.accessories {
+    width: 100%;
+  }
+  .content_2 .off-body-container .icon-container.accessories img {
+    width: 12.5%;
+  }
   .carousel-item .card .btn-container {
     text-align: center;
     width: 100%;
@@ -675,10 +681,9 @@ ul li {
     padding-bottom: 16px;
     transition:  max-height 0.3s ease-out;
   }
-  /* #onBodyCarousel .carousel-inner .card.more-active,
-  #offBodyCarousel .carousel-inner .card.more-active {
-    margin: 0 auto 80px;
-  } */
+  .carousel-item .card.more-active {
+    margin-bottom: 75px !important;
+  }
   .carousel-item .card.more-active .card-body {
     max-height: 500px;
     transition:  max-height 0.3s ease-in;
@@ -696,6 +701,9 @@ ul li {
   .carousel-item .card .card-body .card-body-left,
   .carousel-item .card .card-body .card-body-right {
     width: 100%;
+  }
+  .carousel-item .card .card-body .card-body-right {
+    padding: 20px 0 0 ;
   }
   .carousel-item .card .card-body .card-body-right ul {
     padding: 0 0 0 20px;
@@ -761,6 +769,9 @@ ul li {
   .content_2 .off-body-container .icon-container img {
     width: 40%;
     margin-bottom: 20px;
+  }
+  .content_2 .off-body-container .icon-container.accessories img {
+    width: 20%;
   }
   .content_2 .off-body-container {
     margin: 15px 0 45px;
