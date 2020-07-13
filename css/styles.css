@@ -59,6 +59,24 @@ ul li {
   align-items: center;
   width: 100%;
 }
+.form-inline {
+  position: relative;
+}
+.form-inline input {
+  border: none;
+}
+.form-inline input::placeholder {
+  font-size: 13px;
+  font-weight: bold;
+  color: #E1E1E1;
+}
+.form-inline i {
+  position: absolute;
+  right: 55px;
+  top: 10px;
+  font-size: 16px;
+  color: #E1E1E1;
+}
 .form-inline .form-control {
   margin-right: 2.8rem !important;
 }
@@ -624,6 +642,9 @@ ul li {
   }
   .form-inline .form-control {
     margin-right: 1rem !important;
+  }
+  .form-inline i {
+    right: 30px;
   }
   #search-by-gun .section-header p {
     font-size: 14px;
