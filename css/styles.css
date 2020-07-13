@@ -197,7 +197,6 @@ ul li {
 .carousel-item .card .card-title {
   font-size: 21px;
   font-weight: bold;
-  text-transform: capitalize;
   margin: 0 0 15px;
 }
 .carousel-item .card .card-body {

@@ -4,7 +4,7 @@ $(document).ready(function() {
 			img: './img/card/chest.jpg',
 			alt: '',
 			imgY: '-125px',
-			holster: 'chest holsters',
+			holster: 'Chest Holsters',
 			holsterClass: 'chest',
 			class: 'active',
 			infoText: 'Chest holsters keep the firearm holstered on the body but off the waist, which is ideal for certain situations such as when hiking or backcountry hunting. A quality example will feature a hard shell to protect the firearm but also soft backing against the body which is important given that it will be snug up against you while walking around. Adjustable straps are also a must, as is an advantageous draw angle.',
@@ -17,7 +17,7 @@ $(document).ready(function() {
 			img: './img/card/shoulder.jpg',
 			alt: '',
 			imgY: '-105px',
-			holster: 'shoulder holsters',
+			holster: 'Shoulder Holsters',
 			holsterClass: 'shoulder',
 			infoText: 'Shoulder holsters use a harness to suspend the firearm over the shoulder, keeping it placed under the arm. They can be carried open or concealed, depending on if the holster has a low enough profile against the body. Adjustability and comfort are critical, but having proper retention against the firearm is the most important. As a result, soft, “one-size-fits-all” holster shells should ultimately be avoided.',
 			btnLabel: 'Shop Shoulder Holsters',
@@ -29,7 +29,7 @@ $(document).ready(function() {
 			img: './img/card/belly.jpg',
 			alt: '',
 			imgY: 0,
-			holster: 'belly band holsters',
+			holster: 'Belly Band Holsters',
 			holsterClass: 'belly',
 			imgClass: 'belly-img',
 			infoText: 'Belly band holsters wrap around the waist or lower abdomen, allowing for easy concealment with almost any clothing without requiring a belt. While certainly convenient, care must be taken to select a belly band that securely holds the firearm. Lesser quality designs use flimsy cloth pockets with elastic retention straps, which are barely sufficient for anything less than a micro pistol and often need replacement every few months. Quality belly bands, however, last for years and are comfortable and secure enough to be a viable carry method.',
@@ -42,7 +42,7 @@ $(document).ready(function() {
 			img: './img/card/appendix.jpg',
 			alt: '',
 			imgY: '-60px',
-			holster: 'appendix holsters',
+			holster: 'Appendix Holsters',
 			holsterClass: 'appendix',
 			infoText: 'Appendix holsters are a type of IWB (inside the waistband) holster, but are optimized for being carried in front of the body. Appendix carry has gained a lot of popularity in recent years, and for good reasons. Access is fast, and with the right holster and gun for the right person, appendix carry is very comfortable. Some people find it doesn\'t work for them based on body type and their typical sitting position, but those that do tend to prefer appendix carry to any other method of concealed carry.',
 			benefit: ['Maximum comfort provided by our CoolVent Neoprene backer', 'Single holster clip for secure connection and minimal footprint', 'Secure retention with custom-molded holster shell'],
@@ -54,7 +54,7 @@ $(document).ready(function() {
 			img: './img/card/pocket.jpg',
 			alt: '',
 			imgY: '-80px',
-			holster: 'pocket holsters',
+			holster: 'Pocket Holsters',
 			holsterClass: 'pocket',
 			infoText: 'Pocket holsters are an absolute necessity if you want to carry a pistol in your pocket. The trigger guard must be protected to ensure safety while carrying, as pocket carry without a holster can lead to an accidental discharge. Therefore, make sure to choose a pocket holster with a rigid material covering the trigger guard. A good pocket holster will also have a “pocket catch”, which snags in the pocket and lets the gun pull free from the holster on the draw.',
 			benefit: ['Custom-molded retention shell', 'Full trigger guard coverage', 'Pocket catch wing ensures a clean draw'],
@@ -66,7 +66,7 @@ $(document).ready(function() {
 			img: './img/card/ankle.jpg',
 			alt: '',
 			imgY: 0,
-			holster: 'ankle holsters',
+			holster: 'Ankle Holsters',
 			holsterClass: 'ankle',
 			infoText: 'Ankle holsters wrap around the lower leg and/or the foot so you can cover the gun and holster with your pants. Ankle carry has most commonly been known for its use with law enforcement by providing a space for a backup gun, but it has since gained popularity with civilian carriers for everyday use. Holster selection is crucial, as it needs to be comfortable enough to wear with your normal footwear, secure enough to keep the pistol holstered while walking, but also practical enough to easily access the weapon when necessary.',
 			benefit: ['Two-piece neoprene strap for comfort and stability', 'Custom-molded adjustable retention shell for secure carry', 'Adjustable ride height to work with almost any footwear'],
@@ -78,7 +78,7 @@ $(document).ready(function() {
 			img: './img/card/owb.jpg',
 			alt: '',
 			imgY: '-80px',
-			holster: 'owb holsters',
+			holster: 'OWB Holsters',
 			holsterClass: 'owb',
 			text: 'OWB',
 			infoText: 'OWB (outside the waistband) holsters are worn on the belt but unlike IWB holsters, they are not tucked into the user’s pants or shorts which may be a better fit for users with larger firearms. They are typically the best choice for open carry and range use, but can be used for concealed carry as well.',
@@ -92,7 +92,7 @@ $(document).ready(function() {
 			alt: '',
 			imgY: '-68px',
 			imgYMobile: '-68px',
-			holster: 'iwb holsters',
+			holster: 'IWB Holsters',
 			holsterClass: 'iwb',
 			text: 'IWB',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them the best option for concealed carry. The typical user will place the holster on the back side of their hip allowing for optimum accessibility and concealment. This is proudly our best-selling holster type and we encourage any and everyone to give it a try.',
@@ -105,7 +105,7 @@ $(document).ready(function() {
 			img: './img/card/leg.jpg',
 			alt: '',
 			imgY: '-100px',
-			holster: 'drop-leg holsters',
+			holster: 'Drop-Leg Holsters',
 			holsterClass: 'drop-leg',
 			infoText: 'Drop leg holsters locate the firearm on the upper thigh, giving the user fast access if needed but freeing up the belt.  By providing the user ability for more dynamic movements, it\'s the perfect open carry solution for range days, hiking, tactical training and more. Firearm safety during these kinds of activities is extremely important so users should avoid holsters with soft shells and one-size-fits-all designs.',
 			benefit: ['Custom-molded retention shell retains firearm securely and draws smoothly', 'Elastic leg straps with high-traction lining for comfortable, secure fit', 'Gun and mag carrier compatible'],
@@ -198,6 +198,7 @@ $(document).ready(function() {
 			if(elTargetClass.includes('change-holster')) {
 				el.preventDefault();
 				$('#onBodyCarousel').carousel(0);
+				$('#offBodyCarousel').carousel(0);
 			}
 
 			if(elTargetClass.includes('read-more'))
@@ -231,6 +232,7 @@ $(document).ready(function() {
 				});
 				$('#offBodyCarousel').on('slide.bs.carousel', function (e) {
 					toggleReadMore(null, true)
+					enableSlideControls(e.to, currentLayout);
 				});
 			}
 		}
@@ -283,29 +285,31 @@ $(document).ready(function() {
 												</div>
 											</div>
 											<div class="content content_2">
-												<div class="off-body-container">
-													<div class="icon-container home-carry">
-														<img src="./img/icons/home-carry.png" alt="">
-														<p>Home Defense</p>
-													</div>
-													<div class="icon-container vehicle-carry">
-														<img src="./img/icons/vehicle-carry.png" alt="">
-														<p>Vehicle Carry</p>
-													</div>
-													<div class="icon-container backpack-carry">
-														<img src="./img/icons/backpack-carry.png" alt="">
-														<p>Backpack Carry</p>
-													</div>
-													<div class="icon-container accessories">
-														<img src="./img/icons/molle-carry.png" alt="">
-														<p>MOLLE Carry</p>
-													</div>
-												</div>
 												<div id="offBodyCarousel" class="carousel slide" data-touch="false"  data-interval="false">
 													<div class="carousel-inner">
+													<div class="carousel-item active">
+														<div class="off-body-container">
+														<div class="icon-container home-carry">
+															<img src="./img/icons/home-carry.png" alt="">
+															<p>Home Defense</p>
+														</div>
+														<div class="icon-container vehicle-carry">
+															<img src="./img/icons/vehicle-carry.png" alt="">
+															<p>Vehicle Carry</p>
+														</div>
+														<div class="icon-container backpack-carry">
+															<img src="./img/icons/backpack-carry.png" alt="">
+															<p>Backpack Carry</p>
+														</div>
+														<div class="icon-container accessories">
+															<img src="./img/icons/molle-carry.png" alt="">
+															<p>MOLLE Carry</p>
+														</div>
+													</div>
+												</div>
 														${addHolsterCards(carouselCardsOffBody)}
 													</div>
-													<div class="off-body-controls">
+													<div class="off-body-controls inactive">
 														<a class="carousel-control-prev" href="#offBodyCarousel" role="button" data-slide="prev">
 															<i class="fa fa-chevron-left" aria-hidden="true"></i>
 															<span class="sr-only">Previous</span>
@@ -410,7 +414,7 @@ $(document).ready(function() {
 											<p class="read-more">Read More</p>
 											<div class="btn-container">
 												<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
-												${(carouselCards[i].isOnBody && currentLayout == 'mobile') ? `<a class="change-holster"><i class="fa fa-chevron-left" aria-hidden="true"></i>  Find Your Carry</a>` : ''}
+												${currentLayout == 'mobile' ? `<a class="change-holster"><i class="fa fa-chevron-left" aria-hidden="true"></i>  Find Your Carry</a>` : ''}
 											</div>
 										</div>
 									</div>
@@ -504,16 +508,29 @@ $(document).ready(function() {
 					updateClickedSection('.clickable-section-circle.drop-leg', '#onBodyCarousel', 9);
 				break;
 			case 'icon-container home-carry':
-				updateClickedSection('.icon-container.home-carry', '#offBodyCarousel', 0);
+				if(currentLayout != 'mobile')
+					updateClickedSection('.icon-container.home-carry', '#offBodyCarousel', 0);
+				else
+					updateClickedSection('.icon-container.home-carry', '#offBodyCarousel', 1);
 				break;
 			case 'icon-container vehicle-carry':
-				updateClickedSection('.icon-container.vehicle-carry', '#offBodyCarousel', 1);
+				
+				if(currentLayout != 'mobile')
+					updateClickedSection('.icon-container.vehicle-carry', '#offBodyCarousel', 1);
+				else
+					updateClickedSection('.icon-container.vehicle-carry', '#offBodyCarousel', 2);
 				break;
 			case 'icon-container backpack-carry':
-				updateClickedSection('.icon-container.backpack-carry', '#offBodyCarousel', 2);
+				if(currentLayout != 'mobile')
+					updateClickedSection('.icon-container.backpack-carry', '#offBodyCarousel', 2);
+				else
+					updateClickedSection('.icon-container.backpack-carry', '#offBodyCarousel', 3);
 				break;
 			case 'icon-container accessories':
-				updateClickedSection('.icon-container.accessories', '#offBodyCarousel', 3);
+				if(currentLayout != 'mobile')
+					updateClickedSection('.icon-container.accessories', '#offBodyCarousel', 3);
+				else
+					updateClickedSection('.icon-container.accessories', '#offBodyCarousel', 4);
 				break;
 		}
 	}
