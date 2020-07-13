@@ -387,6 +387,9 @@ ul li {
   text-align: center;
   margin: 0;
 }
+.content_2 .off-body-container.accessories img {
+  margin-top: 3px;
+}
 .inactive {
   display: none;
 }
