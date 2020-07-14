@@ -183,7 +183,7 @@ ul li {
   margin: 0 auto 30px;
 }
 .card .img-container {
-  height: 210px;
+  height: 300px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -269,33 +269,6 @@ ul li {
   flex-wrap: wrap;
   max-height: 330px;
 }
-.content_2 .off-body-container .icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 33.3%;
-  transition: all 0.3s ease;
-}
-.content_2 .off-body-container .icon-container img {
-  height: auto;
-  width: 60%;
-  margin-bottom: 30px;
-  pointer-events: none;
-}
-.content_2 .off-body-container .icon-container:hover {
-  cursor: pointer;
-}
-.content_2 .off-body-container .icon-container  p {
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  margin: 0;
-}
-.content_2 .off-body-container .icon-container.accessories img {
-  margin-top: 3px;
-}
 .inactive {
   display: none;
 }
@@ -344,11 +317,8 @@ ul li {
     width: 100%;
   }
   .card  {
-    max-width: 600px;
-    margin: 0 auto 30px;
     padding: 0;
   }
-  .card .img-container,
   .card .img-container {
     height: 225px;
   }
@@ -376,7 +346,7 @@ ul li {
 /* Mobile */
 @media only screen and (max-width: 568px) {
   #search-by-gun .container {
-    padding: 0 30px;
+    padding: 0 15px;
   }
   .navbar .upper {
     flex-wrap: wrap;
@@ -399,16 +369,14 @@ ul li {
   #search-by-gun .section-header p {
     font-size: 14px;
   }
+  .nav-link {
+    padding: .5rem 0;
+  } 
   .nav.nav-tabs {
     margin-bottom: 30px;
   }
-  .card,
-  .card  {
+  .card {
     padding-bottom: 16px;
-  }
-  .card .img-container,
-  .card .img-container {
-    height: 145px;
   }
   .card .img-container {
     background-position: center center !important;
@@ -421,13 +389,6 @@ ul li {
     overflow: hidden;
     padding-bottom: 16px;
     height: auto;
-  }
-  .card .read-more {
-    display: block;
-    color: #878C91;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
   }
   .card .card-body .card-body-inner {
     flex-direction: column;
@@ -452,6 +413,9 @@ ul li {
 @media only screen and (max-width: 375px) {
   .nav .nav-item a {
     font-size: 14px;
+  }
+  .card .img-container {
+    height: 195px;
   }
 }
 @media only screen and (max-width: 320px) {

@@ -3,7 +3,7 @@ $(document).ready(function() {
 		{
 			img: './img/card/chest.jpg',
 			alt: '',
-			imgY: '-125px',
+			imgY: '-195px',
 			holster: 'Chest Holsters',
 			holsterClass: 'chest',
 			class: 'active',
@@ -16,7 +16,7 @@ $(document).ready(function() {
 		{
 			img: './img/card/shoulder.jpg',
 			alt: '',
-			imgY: '-105px',
+			imgY: '-170px',
 			holster: 'Shoulder Holsters',
 			holsterClass: 'shoulder',
 			infoText: 'Shoulder holsters use a harness to suspend the firearm over the shoulder, keeping it placed under the arm. They can be carried open or concealed, depending on if the holster has a low enough profile against the body. Adjustability and comfort are critical, but having proper retention against the firearm is the most important. As a result, soft, “one-size-fits-all” holster shells should ultimately be avoided.',
@@ -28,7 +28,7 @@ $(document).ready(function() {
 		{
 			img: './img/card/belly.jpg',
 			alt: '',
-			imgY: 0,
+			imgY: '-50px',
 			holster: 'Belly Band Holsters',
 			holsterClass: 'belly',
 			imgClass: 'belly-img',
@@ -41,7 +41,7 @@ $(document).ready(function() {
 		{
 			img: './img/card/appendix.jpg',
 			alt: '',
-			imgY: '-60px',
+			imgY: '-100px',
 			holster: 'Appendix Holsters',
 			holsterClass: 'appendix',
 			infoText: 'Appendix holsters are a type of IWB (inside the waistband) holster, but are optimized for being carried in front of the body. Appendix carry has gained a lot of popularity in recent years, and for good reasons. Access is fast, and with the right holster and gun for the right person, appendix carry is very comfortable. Some people find it doesn\'t work for them based on body type and their typical sitting position, but those that do tend to prefer appendix carry to any other method of concealed carry.',
@@ -53,7 +53,7 @@ $(document).ready(function() {
 		{
 			img: './img/card/pocket.jpg',
 			alt: '',
-			imgY: '-80px',
+			imgY: '-100px',
 			holster: 'Pocket Holsters',
 			holsterClass: 'pocket',
 			infoText: 'Pocket holsters are an absolute necessity if you want to carry a pistol in your pocket. The trigger guard must be protected to ensure safety while carrying, as pocket carry without a holster can lead to an accidental discharge. Therefore, make sure to choose a pocket holster with a rigid material covering the trigger guard. A good pocket holster will also have a “pocket catch”, which snags in the pocket and lets the gun pull free from the holster on the draw.',
@@ -65,7 +65,7 @@ $(document).ready(function() {
 		{
 			img: './img/card/ankle.jpg',
 			alt: '',
-			imgY: 0,
+			imgY: '-70px',
 			holster: 'Ankle Holsters',
 			holsterClass: 'ankle',
 			infoText: 'Ankle holsters wrap around the lower leg and/or the foot so you can cover the gun and holster with your pants. Ankle carry has most commonly been known for its use with law enforcement by providing a space for a backup gun, but it has since gained popularity with civilian carriers for everyday use. Holster selection is crucial, as it needs to be comfortable enough to wear with your normal footwear, secure enough to keep the pistol holstered while walking, but also practical enough to easily access the weapon when necessary.',
@@ -77,7 +77,7 @@ $(document).ready(function() {
 		{
 			img: './img/card/owb.jpg',
 			alt: '',
-			imgY: '-80px',
+			imgY: '-120px',
 			holster: 'OWB Holsters',
 			holsterClass: 'owb',
 			text: 'OWB',
@@ -90,8 +90,7 @@ $(document).ready(function() {
 		{
 			img: './img/card/iwb.jpg',
 			alt: '',
-			imgY: '-68px',
-			imgYMobile: '-68px',
+			imgY: '-110px',
 			holster: 'IWB Holsters',
 			holsterClass: 'iwb',
 			text: 'IWB',
@@ -104,7 +103,7 @@ $(document).ready(function() {
 		{
 			img: './img/card/leg.jpg',
 			alt: '',
-			imgY: '-100px',
+			imgY: '-150px',
 			holster: 'Drop-Leg Holsters',
 			holsterClass: 'drop-leg',
 			infoText: 'Drop leg holsters locate the firearm on the upper thigh, giving the user fast access if needed but freeing up the belt.  By providing the user ability for more dynamic movements, it\'s the perfect open carry solution for range days, hiking, tactical training and more. Firearm safety during these kinds of activities is extremely important so users should avoid holsters with soft shells and one-size-fits-all designs.',
