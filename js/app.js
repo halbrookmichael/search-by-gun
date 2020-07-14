@@ -124,7 +124,7 @@ $(document).ready(function() {
 			infoText: 'A holster mount is used to attach a holster to a desired surface. There are a number of different methods, including the use hook and loop fabric, hard mounts that are drilled into a surface, and less invasive systems that use straps. In all cases, make sure to use a holster that offers adequate trigger guard protection and sufficient retention so the firearm is securely held in the holster.',
 			benefit: ['Multiple mounting systems for choice of attachment to chosen surface', 'Custom-molded retention shells for secure retention', 'Non-hardware options available'],
 			btnLabel: 'Shop Holster Mounts',
-			btnLink: ''
+			btnLink: 'https://aliengearholsters.com/car-holsters.html'
 		},
 		// {
 		// 	img: './img/card/vehicle.jpg',
