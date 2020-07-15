@@ -247,7 +247,19 @@ ul li {
   margin-bottom: 10px;
   float: right;
 }
-.carousel-item .card .btn-container a {
+.holster-btn-container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+.holster-btn-container .btn {
+  margin-bottom: 15px;
+  color: #fff;
+}
+.holster-btn-container .btn {
+  margin-bottom: 15px;
+  color: #fff;
+}
+.btn {
   font-size: 16px;
   letter-spacing: 1px;
   width: 100%;
@@ -256,7 +268,9 @@ ul li {
   color: #fff;
   transition: all 0.3s ease;
 }
-.carousel-item .card .btn-container a:hover {
+.btn:hover,
+.holster-btn-container .btn-primary:not(:disabled):not(.disabled).active, 
+.holster-btn-container .btn-primary:not(:disabled):not(.disabled):active {
   background-color: #fff;
   border-color: #2C3136;
   color: #2C3136;
@@ -279,74 +293,6 @@ ul li {
   display: flex;
 }
 /* Content on-body */
-.content_1 .on-body {
-  position: relative;
-  margin-bottom: 160px;
-}
-.content_1 .on-body img {
-  height: auto;
-  width: 100%;
-}
-.clickable-area {
-  position: absolute;
-  max-height: 355px;
-  height: 100%;
-  width: 100%;
-  top: 86px;
-}
-.clickable-section-circle {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 3px solid #2C3136;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  padding: 9px 0;
-}
-.clickable-section-circle:hover {
-  cursor: pointer;
-}
-.clickable-section-circle.active {
-  background-color: #000;
-}
-.clickable-section-circle.chest {
-  top: 23%;
-  left: 36%;
-}
-.clickable-section-circle.shoulder {
-  top: 30%;
-  left: 27%;
-}
-.clickable-section-circle.belly {
-  top: 36%;
-  left: 36%;
-}
-.clickable-section-circle.appendix {
-  top: 50%;
-  left: 36%;
-}
-.clickable-section-circle.pocket {
-  top: 58%;
-  left: 29%;
-}
-.clickable-section-circle.ankle {
-  bottom: 2%;
-  left: 38%;
-}
-.clickable-section-circle.owb {
-  top: 45%;
-  right: 38%;
-}
-.clickable-section-circle.iwb {
-  top: 45%;
-  right: 27%;
-}
-.clickable-section-circle.drop-leg {
-  top: 66%;
-  right: 35%;
-}
 .clickable-section-circle.owb.active,
 .clickable-section-circle.iwb.active {
   color: #fff;
@@ -413,30 +359,6 @@ ul li {
   z-index: 100;
   bottom: 0;
 }
-/* clickable area height updates */
-@media only screen and (max-width: 1180px) {
-  .clickable-area {
-    max-height: 340px;
-  }
-}
-@media only screen and (max-width: 1125px) {
-  .clickable-area {
-    max-height: 330px;
-  }
-}
-@media only screen and (max-width: 1086px) {
-  .clickable-area {
-    max-height: 315px;
-  }
-  .clickable-section-circle.belly {
-    top: 36.5%;
-  }
-}
-@media only screen and (max-width: 1060px) {
-  .clickable-area {
-    max-height: 300px;
-  }
-}
 @media only screen and (max-width: 991px) {
   .navbar .upper {
     justify-content: space-around;
@@ -494,52 +416,6 @@ ul li {
   .carousel-item .card .card-body {
     padding: 16px 16px;
   }
-  .clickable-area {
-    max-height: 100%;
-    top: 0;
-  }
-  .clickable-section-circle {
-    height: 50px;
-    width: 50px;
-    font-size: 14px;
-    padding: 12px 0;
-  }
-  .clickable-section-circle.chest {
-    top: 23%;
-    left: 36%;
-  }
-  .clickable-section-circle.shoulder {
-    top: 29%;
-    left: 28%;
-  }
-  .clickable-section-circle.belly {
-    top: 34%;
-    left: 36%;
-  }
-  .clickable-section-circle.appendix {
-    top: 45%;
-    left: 36%;
-  }
-  .clickable-section-circle.pocket {
-    top: 53%;
-    left: 29%;
-  }
-  .clickable-section-circle.ankle {
-    bottom: 9%;
-    left: 38%;
-  }
-  .clickable-section-circle.owb {
-    top: 41%;
-    right: 38%;
-  }
-  .clickable-section-circle.iwb {
-    top: 41%;
-    right: 27%;
-  }
-  .clickable-section-circle.drop-leg {
-    top: 60%;
-    right: 36%;
-  }
   .content_2 {
     flex-direction: column;
   }
@@ -589,65 +465,9 @@ ul li {
   #onBodyCarousel .carousel-inner,
   #offBodyCarousel .carousel-inner  {
     padding: 0 30px;
-  }
-  .content_1 .on-body img {
-    transform: scale(1.25);
-    margin-top: 40px;
-  }
+  } 
   #onBodyCarousel .carousel-inner {
     padding: 0 30px 95px;
-  }
-  .clickable-section-circle.chest {
-    left: 33%;
-  }
-  .clickable-section-circle.shoulder {
-    left: 22%;
-  }
-  .clickable-section-circle.belly {
-    top: 36%;
-    left: 33%;
-  }
-  .clickable-section-circle.appendix {
-    top: 50%;
-    left: 33%;
-  }
-  .clickable-section-circle.pocket {
-    top: 57%;
-    left: 24%;
-  }
-  .clickable-section-circle.ankle {
-    bottom: 0%;
-    left: 36%;
-  }
-  .clickable-section-circle.owb {
-    top: 43%;
-    right: 36%;
-  }
-  .clickable-section-circle.iwb {
-    top: 43%;
-    right: 22%;
-  }
-  .clickable-section-circle.drop-leg {
-    top: 65%;
-    right: 32%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .on-body-controls a.carousel-control-prev, 
-  .off-body-controls a.carousel-control-prev {
-    left: -20px;
-  }
-  .on-body-controls a.carousel-control-next, 
-  .off-body-controls a.carousel-control-next {
-    right: -20px;
-  }
-  .on-body-controls a.carousel-control-prev:hover, 
-  .off-body-controls a.carousel-control-prev:hover {
-    left: -25px;
-  }
-  .on-body-controls a.carousel-control-next:hover, 
-  .off-body-controls a.carousel-control-next:hover {
-    right: -25px;
   }
 }
 /* Mobile */
@@ -727,57 +547,6 @@ ul li {
   .carousel-item .card .card-body .card-body-right ul {
     padding: 0 0 0 20px;
   }
-  .content_1 .on-body img {
-    transform: scale(2);
-    margin-top: 100px;
-  }
-  .clickable-area {
-    height: 430px;
-    max-height: inherit;
-    top: 0px;
-  }
-  .clickable-section-circle {
-    height: 45px;
-    width:  45px;
-    font-size: 12px;
-    padding: 10px 0;
-  }
-  .clickable-section-circle.chest {
-    top: 21%;
-    left: 21%;
-  }
-  .clickable-section-circle.shoulder {
-    top: 27%;
-    left: 4%;
-  }
-  .clickable-section-circle.belly {
-    top: 33%;
-    left: 21%;
-  }
-  .clickable-section-circle.appendix {
-    top: 45%;
-    left: 21%;
-  }
-  .clickable-section-circle.pocket {
-    top: 54%;
-    left: 8%;
-  }
-  .clickable-section-circle.ankle {
-    bottom: 5%;
-    left: 26%;
-  }
-  .clickable-section-circle.owb {
-    top: 40%;
-    right: 27%;
-  }
-  .clickable-section-circle.iwb {
-    top: 40%;
-    right: 5%;
-  }
-  .clickable-section-circle.drop-leg {
-    top: 60%;
-    right: 20%;
-  }
   #onBodyCarousel .carousel-inner {
     padding: 0 30px 110px;
     margin-bottom: -110px;
@@ -798,56 +567,10 @@ ul li {
   .carousel-item .card .card-body .card-text {
     font-size: 14px;
   }
-  .on-body-controls a.carousel-control-prev,
-  .off-body-controls a.carousel-control-prev {
-    left: -15px;
-  }
-  .on-body-controls a.carousel-control-next,
-  .off-body-controls a.carousel-control-next  {
-    right: -15px;
-  }
-  .on-body-controls a.carousel-control-prev:hover,
-  .off-body-controls a.carousel-control-prev:hover {
-    left: -15px;
-  }
-  .on-body-controls a.carousel-control-next:hover,
-  .off-body-controls a.carousel-control-next:hover {
-    right: -15px;
-  }
 }
 @media only screen and (max-width: 375px) {
   .nav .nav-item a {
     font-size: 14px;
-  }
-  .clickable-area {
-    height: 395px;
-  }
-  .clickable-section-circle.chest {
-    top: 22%;
-  }
-  .clickable-section-circle.shoulder {
-    top: 28%;
-    left: 3%;
-  }
-  .clickable-section-circle.belly {
-    top: 34%;
-  }
-  .clickable-section-circle.appendix {
-    top: 46%;
-  }
-  .clickable-section-circle.pocket {
-    top: 56%;
-  }
-  .clickable-section-circle.owb {
-    top: 41%;
-    right: 25%;
-  }
-  .clickable-section-circle.iwb {
-    top: 41%;
-    right: 4%;
-  }
-  .clickable-section-circle.drop-leg {
-    top: 62%;
   }
   .content_2 .off-body-container .icon-container:nth-of-type(1),
   .content_2 .off-body-container .icon-container:nth-of-type(2) {
@@ -859,86 +582,13 @@ ul li {
   }
 }
 @media only screen and (max-width: 360px) {
-  .clickable-area {
-    height: 395px;
-  }
-  .clickable-section-circle {
-    height: 40px;
-    width: 40px;
-  }
-  .clickable-section-circle.chest {
-    top: 23%;
-  }
-  .clickable-section-circle.shoulder {
-    top: 26%;
-  }
-  .clickable-section-circle.belly {
-    top: 34%;
-  }
-  .clickable-section-circle.appendix {
-    top: 45%;
-  }
-  .clickable-section-circle.pocket {
-    top: 56%;
-  }
-  .clickable-section-circle.ankle {
-    bottom: 8%;
-  }
-  .clickable-section-circle.owb {
-    top: 41%;
-    right: 25%;
-  }
-  .clickable-section-circle.iwb {
-    top: 41%;
-    right: 4%;
-  }
-  .clickable-section-circle.drop-leg {
-    top: 62%;
-  }
+  
 }
 @media only screen and (max-width: 320px) {
   #search-by-gun .section-header {
     margin-bottom: 15px;
   }
-  .clickable-area {
-    height: 340px;
-  }
-  .clickable-section-circle {
-    height: 40px;
-    width: 40px;
-  }
-  .clickable-section-circle.chest {
-    top: 21%;
-    left: 20%;
-  }
-  .clickable-section-circle.shoulder {
-    top: 26%;
-  }
-  .clickable-section-circle.belly {
-    top: 33%;
-    left: 20%;
-  }
-  .clickable-section-circle.appendix {
-    top: 45%;
-    left: 20%;
-  }
-  .clickable-section-circle.pocket {
-    top: 56%;
-  }
-  .clickable-section-circle.owb {
-    top: 41%;
-    right: 25%;
-  }
-  .clickable-section-circle.iwb {
-    top: 41%;
-    right: 4%;
-  }
-  .clickable-section-circle.drop-leg {
-    top: 62%;
-  }
-  .clickable-section-circle.ankle {
-    bottom: 5%;
-}
+  
   #onBodyCarousel .carousel-inner {
     padding: 0 20px;
     margin-bottom: 10px;

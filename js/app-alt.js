@@ -284,8 +284,6 @@ $(document).ready(function() {
 			const sm = 568;
 			let y = window.scrollY;
 			let h = window.innerHeight;
-			let space = window.innerHeight - container.offsetTop;
-			let cardSpace = window.innerHeight - card.offsetTop;
 
 			if(y >= 0 && !card.classList.contains('more-active'))
 				container.classList.remove('fixed');
