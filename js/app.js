@@ -227,12 +227,10 @@ $(document).ready(function() {
 				removeAllChildNodes(contentParent);
 				updatePageView(currentLayout);
 				$('#onBodyCarousel').on('slide.bs.carousel', function (e) {
-					toggleReadMore(null, true)
-					enableSlideControls(e.to, currentLayout);
+					toggleReadMore(null, true);
 				});
 				$('#offBodyCarousel').on('slide.bs.carousel', function (e) {
-					toggleReadMore(null, true)
-					enableSlideControls(e.to, currentLayout);
+					toggleReadMore(null, true);
 				});
 			}
 		}
@@ -272,16 +270,6 @@ $(document).ready(function() {
 														</div>
 														${addHolsterCards(carouselCardsOnBody)}
 													</div>
-													<div class="on-body-controls inactive">
-														<a class="carousel-control-prev" href="#onBodyCarousel" role="button" data-slide="prev">
-															<i class="fa fa-chevron-left" aria-hidden="true"></i>
-															<span class="sr-only">Previous</span>
-														</a>
-														<a class="carousel-control-next" href="#onBodyCarousel" role="button" data-slide="next">
-															<i class="fa fa-chevron-right" aria-hidden="true"></i>
-															<span class="sr-only">Next</span>
-														</a>
-													</div>
 												</div>
 											</div>
 											<div class="content content_2">
@@ -290,34 +278,25 @@ $(document).ready(function() {
 													<div class="carousel-item active">
 														<div class="off-body-container">
 														<div class="icon-container home-carry">
-															<img src="./img/icons/home-carry.png" alt="">
+															<img class="home-icon-main" src="./img/icons/home-carry.png" alt="">
+															<img class="home-icon-hover" src="./img/icons/home-carry-hover.png" alt="">
 															<p>Holster Mounts</p>
 														</div>
 														<div class="icon-container backpack-carry">
-															<img src="./img/icons/backpack-carry.png" alt="">
+															<img class="backpack-icon-main" src="./img/icons/backpack-carry.png" alt="">
+															<img class="backpack-icon-hover" src="./img/icons/backpack-carry-hover.png" alt="">
 															<p>Backpack Carry</p>
 														</div>
 														<div class="icon-container accessories">
-															<img src="./img/icons/molle-carry.png" alt="">
+															<img class="molle-icon-main" src="./img/icons/molle-carry.png" alt="">
+															<img class="molle-icon-hover" src="./img/icons/molle-carry-hover.png" alt="">
 															<p>MOLLE Carry</p>
 														</div>
 													</div>
 												</div>
-														${addHolsterCards(carouselCardsOffBody)}
-													</div>
-													<div class="off-body-controls inactive">
-														<a class="carousel-control-prev" href="#offBodyCarousel" role="button" data-slide="prev">
-															<i class="fa fa-chevron-left" aria-hidden="true"></i>
-															<span class="sr-only">Previous</span>
-														</a>
-														<a class="carousel-control-next" href="#offBodyCarousel" role="button" data-slide="next">
-															<i class="fa fa-chevron-right" aria-hidden="true"></i>
-															<span class="sr-only">Next</span>
-														</a>
-													</div>
+													${addHolsterCards(carouselCardsOffBody)}
 												</div>
-											</div>
-										</div>`;
+											</div>`;
 		}
 		else if(currentLayout == 'desktop') {
 			pageContent = `<div class="content content_1 active">
@@ -352,15 +331,18 @@ $(document).ready(function() {
 													</li>
 												</ul>
 												<div class="icon-container home-carry">
-													<img src="./img/icons/home-carry.png" alt="">
+													<img class="home-icon-main" src="./img/icons/home-carry.png" alt="">
+													<img class="home-icon-hover" src="./img/icons/home-carry-hover.png" alt="">
 													<p>Holster Mounts</p>
 												</div>
 												<div class="icon-container backpack-carry">
-													<img src="./img/icons/backpack-carry.png" alt="">
+													<img class="backpack-icon-main" src="./img/icons/backpack-carry.png" alt="">
+													<img class="backpack-icon-hover" src="./img/icons/backpack-carry-hover.png" alt="">
 													<p>Backpack Carry</p>
 												</div>
 												<div class="icon-container accessories">
-													<img src="./img/icons/molle-carry.png" alt="">
+													<img class="molle-icon-main" src="./img/icons/molle-carry.png" alt="">
+													<img class="molle-icon-hover" src="./img/icons/molle-carry-hover.png" alt="">
 													<p>MOLLE Carry</p>
 												</div>
 											</div>
@@ -386,6 +368,11 @@ $(document).ready(function() {
 
 		for(let i = 0; i < carouselCards.length; i ++) {
 			cards += `<div class="carousel-item ${carouselCards[i].class && width >= 767 ? carouselCards[i].class : ''}">
+									${currentLayout == 'mobile' ? 
+										`<div class="change-holster">
+											<p><i class="fa fa-chevron-left" aria-hidden="true"></i>  Find Your Carry</p>
+										</div>` : ''
+									}
 									<div class="card">
 										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgY};"></div>
 										<div class="card-body">
@@ -406,7 +393,6 @@ $(document).ready(function() {
 											<p class="read-more">Read More</p>
 											<div class="btn-container">
 												<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
-												${currentLayout == 'mobile' ? `<a class="change-holster"><i class="fa fa-chevron-left" aria-hidden="true"></i>  Find Your Carry</a>` : ''}
 											</div>
 										</div>
 									</div>
