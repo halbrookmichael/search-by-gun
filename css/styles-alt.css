@@ -179,8 +179,31 @@ ul li {
 .card {
   max-width: 800px;
   width: 100%;
-  border: 1px solid #878C91;
-  margin: 0 auto 30px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: .5px solid #878C91 !important;
+  border-radius: 0;
+  margin: 0 auto;
+}
+.card .card-header {
+  background-color: transparent;
+  padding-left: 0;
+  padding-bottom: 0;
+  border: none;
+  outline: none;
+}
+.card .card-header button span,
+.card .card-header button i {
+  color: #707070;
+  font-weight: bold;
+  pointer-events: none;
+}
+.btn-link.focus, 
+.btn-link:focus {
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
 }
 .card .img-container {
   height: 300px;

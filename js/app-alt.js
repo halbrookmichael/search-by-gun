@@ -158,7 +158,8 @@ $(document).ready(function() {
   ];
   
 	let currentTab;
-  let contentParent = document.getElementById('content');
+	let contentParent = document.getElementById('content');
+	let allChevrons = document.querySelectorAll('.card .card-header button i');
   
   updatePageView()
 
@@ -184,6 +185,13 @@ $(document).ready(function() {
 
 			if(elTargetClass.includes('read-more'))
 				toggleReadMore(elTarget, false);
+			
+			if(elTargetClass.includes('btn btn-link')) {
+				for(let i = 0;i < allChevrons.length;i ++) {
+					allChevrons[i].classList.remove('fa-chevron-down');
+					updateChevron(elTarget);
+				}
+			}
 		}
 	});
 		
@@ -191,40 +199,54 @@ $(document).ready(function() {
 	function updatePageView() {
     let pageContent;
     
-    pageContent = `<div class="content alt content_1 active">
-                      ${addHolsterCards(carouselCardsOnBody)}
-                    </div>
-                    <div class="content alt content_2">
-                      ${addHolsterCards(carouselCardsOffBody)}
+		pageContent = `<div class="content alt content_1 active">
+										<div class="accordion" id="accordionOnBody">
+											${addHolsterCards(carouselCardsOnBody, 'accordionOnBody')}
+										</div>
+                  </div>
+										<div class="content alt content_2">
+											<div class="accordion" id="accordionOffBody">
+												${addHolsterCards(carouselCardsOffBody, 'accordionOffBody')}
+											</div>
                     </div>`;
 			
 		append(pageContent);
 	}
-	function addHolsterCards(carouselCards) {
+	function addHolsterCards(carouselCards, sectionName) {
 		let cards = '';
 
 		for(let i = 0; i < carouselCards.length; i ++) {
 			cards += `<div class="card">
-                  <div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgY};"></div>
-                  <div class="card-body">
-                    <div class="card-body-inner">
-                      <div class="card-body-left">
-                        <h5 class="card-title">${carouselCards[i].holster}</h5>
-                        <p class="card-text">${carouselCards[i].infoText}</p>
-                      </div>
-                      <div class="card-body-right">
-                        <p>Key features by Alien Gear Holsters:</p>
-                        <ul class="benfits-list">
-                          ${addHolsterBenefits(carouselCards[i].benefit)}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="fixed-container">
-                    <div class="btn-container">
-                      <a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
-                    </div>
-                  </div>
+									<div class="card-header" id="heading${sectionName + i}">
+										<h2 class="mb-0">
+											<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse${sectionName + i}" aria-expanded="true" aria-controls="collapse${sectionName + i}">
+												<i class="fa fa-chevron-right mr-2" aria-hidden="true"></i><span>${carouselCards[i].holster}</span>
+											</button>
+										</h2>
+									</div>
+
+									<div id="collapse${sectionName + i}" class="collapse" aria-labelledby="heading${sectionName + i}" data-parent="#${sectionName}">
+										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgY};"></div>
+										<div class="card-body">
+											<div class="card-body-inner">
+												<div class="card-body-left">
+													<h5 class="card-title">${carouselCards[i].holster}</h5>
+													<p class="card-text">${carouselCards[i].infoText}</p>
+												</div>
+												<div class="card-body-right">
+													<p>Key features by Alien Gear Holsters:</p>
+													<ul class="benfits-list">
+														${addHolsterBenefits(carouselCards[i].benefit)}
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="fixed-container">
+											<div class="btn-container">
+												<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
+											</div>
+										</div>
+									</div>
                 </div>`;
 		}
 		return cards;
