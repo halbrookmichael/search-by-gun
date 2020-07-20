@@ -298,8 +298,8 @@ $(document).ready(function() {
 																	</div>
 																</div>
 															</div>
+															${addHolsterCards(carouselCardsOffBody)}
 														</div>
-														${addHolsterCards(carouselCardsOffBody)}
 													</div>
 												</div>
 												<div class="content content_3">
@@ -509,7 +509,7 @@ $(document).ready(function() {
 	}
 	function onSectionClick(elTargetClass) {
 		removeAllClickedItems();
-
+		console.log('hello')
 		switch(elTargetClass) {
 			case 'clickable-section-circle chest':
 				if(currentLayout != 'mobile')
@@ -605,7 +605,6 @@ $(document).ready(function() {
 		for(let i = 0;i < contentContainers.length;i ++) {
 			contentContainers[i].classList.remove('active');
 		}
-		console.log(tab)
 
 		if(tab == 0) {
 			$('.content_1').addClass('active');
