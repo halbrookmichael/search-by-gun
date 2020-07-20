@@ -169,9 +169,11 @@ ul li {
 }
 .nav .nav-item {
   padding: 8px 0;
-  height: 56px;
-  width: 50%;
+  width: 33.3%;
   text-align: center;
+}
+.nav-tabs .nav-link {
+  border: none;
 }
 .nav .nav-item.active {
  border-bottom: 5px solid #2C3136;
@@ -191,7 +193,6 @@ ul li {
 .nav-tabs .nav-link:hover {
   border-color: transparent;
 }
-
 /* Carousel */
 .carousel-inner {
   margin: 0 auto;
@@ -213,6 +214,10 @@ ul li {
   font-weight: bold;
   margin: 0 0 15px;
 }
+.carousel-item .card .text-title {
+  font-size: 18px;
+  font-weight: bold;
+}
 .carousel-item .card .card-body {
   padding: 20px 0;
 }
@@ -227,27 +232,27 @@ ul li {
   justify-content: space-between;
   margin-bottom: 15px;
 }
-.carousel-item .card .card-body .card-body-left,
-.carousel-item .card .card-body .card-body-right {
+.card .card-body .card-body-left,
+.card .card-body .card-body-right {
   width: 50%;
 }
-.carousel-item .card .card-body .card-body-right {
+.card .card-body .card-body-right {
   padding: 40px 0 0 40px;
 }
 .carousel-item .card .card-body .card-body-right ul {
   padding: 0;
 }
-.carousel-item .card .card-body .card-body-right .benfits-list li {
+.card .card-body .card-body-right .benefits-list li {
   list-style: inherit;
   font-size: 14px;
   margin-bottom: 10px;
 }
-.carousel-item .card .btn-container {
+.card .btn-container {
   width: 50%;
   margin-bottom: 10px;
   float: right;
 }
-.carousel-item .card .btn-container a {
+.card .btn-container a {
   font-size: 16px;
   letter-spacing: 1px;
   width: 100%;
@@ -256,19 +261,14 @@ ul li {
   color: #fff;
   transition: all 0.3s ease;
 }
-.carousel-item .card .btn-container a:hover {
+.card .btn-container a:hover {
   background-color: #fff;
   border-color: #2C3136;
   color: #2C3136;
   transition: all 0.3s ease;
 }
-.carousel-item .card .btn-container a:first-of-type {
+.card .btn-container a:first-of-type {
   margin-bottom: 10px;
-}
-.on-body-controls a i,
-.off-body-controls a i {
-  color: #878C91;
-  font-size: 20px;
 }
 /* Content */
 .content {
@@ -404,6 +404,47 @@ ul li {
 .content_2 .off-body-container .icon-container.accessories img {
   margin-top: 3px;
 }
+/* Content all */
+.content_3  {
+  flex-direction: column;
+}
+.content_3 .card {
+  width: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: .5px solid #878C91 !important;
+  border-radius: 0;
+  margin: 0 auto;
+}
+.content_3 .card .card-header {
+  background-color: transparent;
+  padding-left: 0;
+  padding-bottom: 0;
+  border: none;
+  outline: none;
+}
+.content_3 .card .card-header button span,
+.content_3 .card .card-header button i {
+  color: #707070;
+  font-weight: bold;
+  pointer-events: none;
+}
+.content_3 .card .btn-link.focus, 
+.content_3 .card .btn-link:focus {
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+}
+.content_3 .card .img-container {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content_3 .card .card-body-right .benefits-list {
+  padding-left: 20px;
+}
 .fixed {
   width: 100%;
   height: auto;
@@ -412,6 +453,30 @@ ul li {
   left: 0;
   z-index: 100;
   bottom: 0;
+}
+.pulse {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  animation: pulse 1.25s 2;
+  pointer-events: none;
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(15, 161, 52, 0.8);
+    box-shadow: 0 0 0 0 rgba(15, 161, 52, 0.8);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    box-shadow: 0 0 0 25px rgba(204,169,44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
 }
 /* clickable area height updates */
 @media only screen and (max-width: 1180px) {
@@ -425,6 +490,9 @@ ul li {
   }
 }
 @media only screen and (max-width: 1086px) {
+  .nav .nav-item a {
+    font-size: 14px;
+  }
   .clickable-area {
     max-height: 315px;
   }
@@ -563,11 +631,16 @@ ul li {
   .content_2 .off-body-container .icon-container.accessories img {
     width: 12.5%;
   }
-  .carousel-item .card .btn-container {
+  .card .btn-container {
     text-align: center;
     width: 100%;
     padding: 0 16px;
     float: none;
+  }
+  .content_3 .card .btn-container {
+    margin: 0 auto;
+    max-width: 550px;
+    padding-bottom: 30px;
   }
   .carousel-item .change-holster {
     margin-bottom: 15px;
@@ -632,24 +705,6 @@ ul li {
     right: 32%;
   }
 }
-@media only screen and (max-width: 767px) {
-  .on-body-controls a.carousel-control-prev, 
-  .off-body-controls a.carousel-control-prev {
-    left: -20px;
-  }
-  .on-body-controls a.carousel-control-next, 
-  .off-body-controls a.carousel-control-next {
-    right: -20px;
-  }
-  .on-body-controls a.carousel-control-prev:hover, 
-  .off-body-controls a.carousel-control-prev:hover {
-    left: -25px;
-  }
-  .on-body-controls a.carousel-control-next:hover, 
-  .off-body-controls a.carousel-control-next:hover {
-    right: -25px;
-  }
-}
 /* Mobile */
 @media only screen and (max-width: 568px) {
   #search-by-gun .container {
@@ -679,6 +734,15 @@ ul li {
   .nav.nav-tabs {
     margin-bottom: 30px;
   }
+  .nav.nav-tabs .nav-item {
+    padding: 0;
+  }
+  .nav.nav-tabs .nav-item:nth-of-type(3) {
+    padding: 0 2px;
+  }
+  .nav-link {
+    padding: .5rem 1rem .25rem;
+}
   #onBodyCarousel .carousel-inner .card,
   #offBodyCarousel .carousel-inner .card  {
     padding-bottom: 16px;
@@ -687,15 +751,15 @@ ul li {
   #offBodyCarousel .carousel-inner .card .img-container {
     height: 145px;
   }
-  .carousel-item .card .img-container {
+  .card .img-container {
     background-position: center center !important;
   }
-  .carousel-item .card .img-container.belly-img {
+  .card .img-container.belly-img {
     background-position: right center !important;
   }
   .carousel-item .card .card-body {
     flex-direction: column;
-    max-height: 200px;
+    max-height: 120px;
     overflow: hidden;
     padding-bottom: 16px;
     transition:  max-height 0.3s ease-out;
@@ -717,11 +781,11 @@ ul li {
   .carousel-item .card .card-body .card-body-inner {
     flex-direction: column;
   }
-  .carousel-item .card .card-body .card-body-left,
-  .carousel-item .card .card-body .card-body-right {
+  .card .card-body .card-body-left,
+  .card .card-body .card-body-right {
     width: 100%;
   }
-  .carousel-item .card .card-body .card-body-right {
+  .card .card-body .card-body-right {
     padding: 20px 0 0 ;
   }
   .carousel-item .card .card-body .card-body-right ul {
@@ -798,26 +862,16 @@ ul li {
   .carousel-item .card .card-body .card-text {
     font-size: 14px;
   }
-  .on-body-controls a.carousel-control-prev,
-  .off-body-controls a.carousel-control-prev {
-    left: -15px;
-  }
-  .on-body-controls a.carousel-control-next,
-  .off-body-controls a.carousel-control-next  {
-    right: -15px;
-  }
-  .on-body-controls a.carousel-control-prev:hover,
-  .off-body-controls a.carousel-control-prev:hover {
-    left: -15px;
-  }
-  .on-body-controls a.carousel-control-next:hover,
-  .off-body-controls a.carousel-control-next:hover {
-    right: -15px;
+  .content_3  {
+    padding: 0 15px;
   }
 }
 @media only screen and (max-width: 375px) {
   .nav .nav-item a {
     font-size: 14px;
+  }
+  .nav.nav-tabs .nav-item:nth-last-of-type(3) {
+    padding: 0;
   }
   .clickable-area {
     height: 395px;

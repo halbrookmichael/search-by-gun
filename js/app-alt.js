@@ -159,7 +159,6 @@ $(document).ready(function() {
   
 	let currentTab;
 	let contentParent = document.getElementById('content');
-	let allChevrons = document.querySelectorAll('.card .card-header button i');
   
   updatePageView()
 
@@ -168,6 +167,8 @@ $(document).ready(function() {
 		let elTarget = el.target;
 		let elTargetClass = el.target.getAttribute('class');
 		let current = elTarget.parentElement.parentElement;
+		let allChevrons = document.querySelectorAll('.card .card-header button i');
+
 
 		console.log('Element Clicked = ', elTarget);
 		console.log('Element Clicked Class = ', elTargetClass);
@@ -187,10 +188,14 @@ $(document).ready(function() {
 				toggleReadMore(elTarget, false);
 			
 			if(elTargetClass.includes('btn btn-link')) {
+				let currentChevron = elTarget.firstChild.nextSibling;
+
 				for(let i = 0;i < allChevrons.length;i ++) {
+					console.log('removing')
 					allChevrons[i].classList.remove('fa-chevron-down');
-					updateChevron(elTarget);
+					allChevrons[i].classList.add('fa-chevron-right');
 				}
+				updateChevron(currentChevron);
 			}
 		}
 	});
@@ -319,5 +324,15 @@ $(document).ready(function() {
 				container.classList.add('fixed');
 
 		});	
+	}
+	function updateChevron(currentChevron) {
+
+		console.log(currentChevron.classList[3])
+
+		if(currentChevron.classList[3] == 'fa-chevron-down')
+			// currentChevron.classList.remove('fa-chevron-down');
+			console.log('true')
+		else
+			currentChevron.classList.add('fa-chevron-down');
 	}
 });

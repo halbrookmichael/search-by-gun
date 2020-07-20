@@ -95,6 +95,7 @@ $(document).ready(function() {
 			holster: 'IWB Holsters',
 			holsterClass: 'iwb',
 			text: 'IWB',
+			pulse: 'pulse',
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them the best option for concealed carry. The typical user will place the holster on the back side of their hip allowing for optimum accessibility and concealment. This is proudly our best-selling holster type and we encourage any and everyone to give it a try.',
 			benefit: ['Custom-molded retention shell securely holds the firearm', 'Holster base includes CoolVent Neoprene for all day comfort', 'Adjustable retention, cant, and ride height'],
 			btnLabel: 'Shop IWB Holsters',
@@ -160,7 +161,6 @@ $(document).ready(function() {
 
 	let width;
 	let currentLayout;
-	let currentTab;
 	let contentParent = document.getElementById('content');
 
 	width = $(window).width();
@@ -186,11 +186,12 @@ $(document).ready(function() {
 		if(elTargetClass) {
 			if(elTargetClass.includes('nav-link on-body-tab')) {
 				toggleActiveTab(0);
-				currentTab = 0;
 			}
 			else if(elTargetClass.includes('nav-link off-body-tab')) {
 				toggleActiveTab(1);
-				currentTab = 1;
+			}
+			else if(elTargetClass.includes('nav-link all-tab')) {
+				toggleActiveTab(2);
 			}
 
 			onSectionClick(elTargetClass);
@@ -255,46 +256,59 @@ $(document).ready(function() {
 												<li class="nav-item">
 													<a class="nav-link off-body-tab" href="#">Off-Body Carry</a>
 												</li>
+												<li class="nav-item">
+													<a class="nav-link all-tab" href="#">All Holsters</a>
+												</li>
 											</ul>
 											<div class="mobile-content">
 												<div class="content content_1 active mobile">
-												<div id="onBodyCarousel" class="carousel slide" data-touch="false" data-interval="false">
-													<div class="carousel-inner">
-														<div class="carousel-item active">
-															<div class="on-body">
-																<img src="img/on-body.png" alt="">
-																<div class="clickable-area">
-																	${addClickableAreas(carouselCardsOnBody)}
+													<div id="onBodyCarousel" class="carousel slide" data-touch="false" data-interval="false">
+														<div class="carousel-inner">
+															<div class="carousel-item active">
+																<div class="on-body">
+																	<img src="img/on-body.png" alt="">
+																	<div class="clickable-area">
+																		${addClickableAreas(carouselCardsOnBody)}
+																	</div>
+																</div>
+															</div>
+															${addHolsterCards(carouselCardsOnBody)}
+														</div>
+													</div>
+												</div>
+												<div class="content content_2">
+													<div id="offBodyCarousel" class="carousel slide" data-touch="false"  data-interval="false">
+														<div class="carousel-inner">
+															<div class="carousel-item active">
+																<div class="off-body-container">
+																	<div class="icon-container home-carry">
+																		<img class="home-icon-main" src="./img/icons/home-carry.png" alt="">
+																		<img class="home-icon-hover" src="./img/icons/home-carry-hover.png" alt="">
+																		<p>Holster Mounts</p>
+																	</div>
+																	<div class="icon-container backpack-carry">
+																		<img class="backpack-icon-main" src="./img/icons/backpack-carry.png" alt="">
+																		<img class="backpack-icon-hover" src="./img/icons/backpack-carry-hover.png" alt="">
+																		<p>Backpack Carry</p>
+																	</div>
+																	<div class="icon-container accessories">
+																		<img class="molle-icon-main" src="./img/icons/molle-carry.png" alt="">
+																		<img class="molle-icon-hover" src="./img/icons/molle-carry-hover.png" alt="">
+																		<p>MOLLE Carry</p>
+																	</div>
 																</div>
 															</div>
 														</div>
-														${addHolsterCards(carouselCardsOnBody)}
+														${addHolsterCards(carouselCardsOffBody)}
 													</div>
 												</div>
-											</div>
-											<div class="content content_2">
-												<div id="offBodyCarousel" class="carousel slide" data-touch="false"  data-interval="false">
-													<div class="carousel-inner">
-													<div class="carousel-item active">
-														<div class="off-body-container">
-														<div class="icon-container home-carry">
-															<img class="home-icon-main" src="./img/icons/home-carry.png" alt="">
-															<img class="home-icon-hover" src="./img/icons/home-carry-hover.png" alt="">
-															<p>Holster Mounts</p>
-														</div>
-														<div class="icon-container backpack-carry">
-															<img class="backpack-icon-main" src="./img/icons/backpack-carry.png" alt="">
-															<img class="backpack-icon-hover" src="./img/icons/backpack-carry-hover.png" alt="">
-															<p>Backpack Carry</p>
-														</div>
-														<div class="icon-container accessories">
-															<img class="molle-icon-main" src="./img/icons/molle-carry.png" alt="">
-															<img class="molle-icon-hover" src="./img/icons/molle-carry-hover.png" alt="">
-															<p>MOLLE Carry</p>
-														</div>
+												<div class="content content_3">
+													<div class="accordion" id="accordionOnBody">
+														${addHolsterCardsAll(carouselCardsOnBody, 'accordionOnBody')}
 													</div>
-												</div>
-													${addHolsterCards(carouselCardsOffBody)}
+													<div class="accordion" id="accordionOffBody">
+														${addHolsterCardsAll(carouselCardsOffBody, 'accordionOffBody')}
+													</div>
 												</div>
 											</div>`;
 		}
@@ -307,6 +321,9 @@ $(document).ready(function() {
 													</li>
 													<li class="nav-item">
 														<a class="nav-link off-body-tab" href="#">Off-Body Carry</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link all-tab" href="#">All Holsters</a>
 													</li>
 												</ul>
 												<img src="img/on-body.png" alt="">
@@ -328,6 +345,9 @@ $(document).ready(function() {
 													</li>
 													<li class="nav-item">
 														<a class="nav-link off-body-tab" href="#">Off-Body Carry</a>
+													</li>
+														<li class="nav-item">
+														<a class="nav-link all-tab" href="#">All Holsters</a>
 													</li>
 												</ul>
 												<div class="icon-container home-carry">
@@ -351,6 +371,25 @@ $(document).ready(function() {
 													${addHolsterCards(carouselCardsOffBody)}
 												</div>
 											</div>
+										</div>
+										<div class="content content_3">
+											<ul class="nav nav-tabs">
+												<li class="nav-item">
+													<a class="nav-link on-body-tab" href="#">On-Body Carry</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link off-body-tab" href="#">Off-Body Carry</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link all-tab" href="#">All Holsters</a>
+												</li>
+											</ul>
+											<div class="accordion" id="accordionOnBody">
+												${addHolsterCardsAll(carouselCardsOnBody, 'accordionOnBody')}
+											</div>
+											<div class="accordion" id="accordionOffBody">
+												${addHolsterCardsAll(carouselCardsOffBody, 'accordionOffBody')}
+											</div>
 										</div>`;
 		}
 		append(pageContent);
@@ -358,7 +397,7 @@ $(document).ready(function() {
 	function addClickableAreas(carouselCards) {
 		let holsters = '';
 		for(let i = 0; i < carouselCards.length; i ++) {
-			 holsters += `<div class="clickable-section-circle ${carouselCards[i].holsterClass}">${carouselCards[i].text ? carouselCards[i].text : ''}</div>`
+			 holsters += `<div class="clickable-section-circle ${carouselCards[i].holsterClass} "><div class="${carouselCards[i].pulse ? carouselCards[i].pulse : ''}"></div></div>`
 		}
 		return holsters;
 	}
@@ -379,11 +418,14 @@ $(document).ready(function() {
 											<div class="card-body-inner">
 												<div class="card-body-left">
 													<h5 class="card-title">${carouselCards[i].holster}</h5>
-													<p class="card-text">${carouselCards[i].infoText}</p>
+													<div class="">
+														<h5 class="text-title mb-1">What is it?</h5>
+														<p class="card-text">${carouselCards[i].infoText}</p>
+													</div>
 												</div>
 												<div class="card-body-right">
 													<p>Key features by Alien Gear Holsters:</p>
-													<ul class="benfits-list">
+													<ul class="benefits-list">
 														${addHolsterBenefits(carouselCards[i].benefit)}
 													</ul>
 												</div>
@@ -400,6 +442,45 @@ $(document).ready(function() {
 		}
 		return cards;
 	}
+	function addHolsterCardsAll(carouselCards, sectionName) {
+		let cards = '';
+
+		for(let i = 0; i < carouselCards.length; i ++) {
+			cards += `<div class="card">
+									<div class="card-header" id="heading${sectionName + i}">
+										<h2 class="mb-0">
+											<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse${sectionName + i}" aria-expanded="true" aria-controls="collapse${sectionName + i}">
+												<i class="fa fa-chevron-right mr-2" aria-hidden="true"></i><span>${carouselCards[i].holster}</span>
+											</button>
+										</h2>
+									</div>
+
+									<div id="collapse${sectionName + i}" class="collapse" aria-labelledby="heading${sectionName + i}" data-parent="#${sectionName}">
+										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgY};"></div>
+										<div class="card-body">
+											<div class="card-body-inner">
+												<div class="card-body-left">
+													<h5 class="card-title">${carouselCards[i].holster}</h5>
+													<p class="card-text">${carouselCards[i].infoText}</p>
+												</div>
+												<div class="card-body-right">
+													<p>Key features by Alien Gear Holsters:</p>
+													<ul class="benefits-list">
+														${addHolsterBenefits(carouselCards[i].benefit)}
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="fixed-container">
+											<div class="btn-container">
+												<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
+											</div>
+										</div>
+									</div>
+                </div>`;
+		}
+		return cards;
+	}
 	function addHolsterBenefits(carouselCardsBenefits) {
 		let benefits = '';
 		for(let i = 0; i < carouselCardsBenefits.length; i ++) {
@@ -411,7 +492,6 @@ $(document).ready(function() {
 		$(contentParent).append(pageContent);
 		$('.nav-tabs li').eq(0).addClass('active');
 		$('#offBodyCarousel .carousel-item').eq(0).addClass('active');
-		toggleActiveTab(currentTab);
 
 		if(currentLayout == 'desktop') {
 			$('.clickable-section-circle.iwb').addClass('active');
@@ -516,17 +596,28 @@ $(document).ready(function() {
 		$(carousel).carousel(slide);
 	}
 	function toggleActiveTab(tab) {
+		let tabs = document.querySelectorAll('.nav-tabs .nav-item');
+		let contentContainers = document.querySelectorAll('.content');
+
+		for(let i = 0;i < tabs.length;i ++) {
+			tabs[i].classList.remove('active');
+		}
+		for(let i = 0;i < contentContainers.length;i ++) {
+			contentContainers[i].classList.remove('active');
+		}
+		console.log(tab)
+
 		if(tab == 0) {
-			$('.content_2').removeClass('active');
 			$('.content_1').addClass('active');
-			$('.off-body-tab').parent().removeClass('active');
 			$('.on-body-tab').parent().addClass('active');
 		}
 		else if(tab == 1) {
-			$('.content_1').removeClass('active');
 			$('.content_2').addClass('active');
-			$('.on-body-tab').parent().removeClass('active');
 			$('.off-body-tab').parent().addClass('active');
+		}
+		else if(tab == 2) {
+			$('.content_3').addClass('active');
+			$('.all-tab').parent().addClass('active');
 		}
 	}
 	function toggleReadMore(readMoreTarget, closeAll) {
