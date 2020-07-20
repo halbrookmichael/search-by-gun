@@ -643,7 +643,7 @@ $(document).ready(function() {
 		container.classList.toggle('fixed');
 		
 		$(window).scroll(function() {
-			const lg = 812;
+			const lg = 823;
 			const md = 667;
 			const sm = 568;
 			let y = window.scrollY;
@@ -651,11 +651,11 @@ $(document).ready(function() {
 
 			if(y >= 0 && !card.classList.contains('more-active'))
 				container.classList.remove('fixed');
-			else if(y >= 200 && h == lg) 
+			else if(y >= 280 && h == lg) 
 				container.classList.remove('fixed');
-			else if(y >= 300 && h == md)
+			else if(y >= 450 && h == md)
 				container.classList.remove('fixed');
-			else if(y >= 500 && h == sm)
+			else if(y >= 510 && h == sm)
 				container.classList.remove('fixed');
 			else
 				container.classList.add('fixed');
