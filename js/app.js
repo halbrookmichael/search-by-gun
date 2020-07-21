@@ -671,13 +671,6 @@ $(document).ready(function() {
 
 			if(y >= 0 && !card.classList.contains('more-active'))
 				container.classList.remove('fixed');
-			else if(y <= 200 && card.classList.contains('more-active')) {
-				container.classList.remove('fixed');
-				card.classList.remove('more-active');
-				arrow.removeClass('fa-chevron-up');
-				arrow.addClass('fa-chevron-down');
-				$(readMoreTarget).text('Read More');
-			}
 			else if(y >= 280 && h == lg) 
 				container.classList.remove('fixed');
 			else if(y >= 450 && h == md)
