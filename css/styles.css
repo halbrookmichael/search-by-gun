@@ -199,6 +199,7 @@ ul li {
 /* Carousel */
 .carousel-inner {
   margin: 0 auto;
+  padding: 0 15px;
 }
 /* Carousel item card */
 .carousel-item .card {
@@ -212,23 +213,18 @@ ul li {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.carousel-item .card .card-title {
+.card .card-title,
+.card .text-title {
   font-size: 21px;
   font-weight: bold;
+  color: #2C3136;
   margin: 0 0 15px;
-}
-.carousel-item .card .text-title {
-  font-size: 18px;
-  font-weight: bold;
 }
 .carousel-item .card .card-body {
   padding: 20px 0;
 }
 .carousel-item .card .read-more {
   display: none;
-}
-.carousel-item .card .read-more:hover {
-  cursor: pointer;
 }
 .card .card-body .card-body-inner {
   display: flex;
@@ -238,14 +234,18 @@ ul li {
 .card .card-body .card-body-left,
 .card .card-body .card-body-right {
   width: 50%;
+  padding-top: 10px;
+}
+.card .card-body .card-body-left {
+  padding-right: 10px;
 }
 .card .card-body .card-body-right {
-  padding: 40px 0 0 20px;
+  padding-left: 10px;
 }
-.card .card-body .card-body-right ul {
-  padding: 0 0 0 25px;
+.card .card-body .card-body-left .benefits-list {
+  padding-left: 30px;
 }
-.card .card-body .card-body-right .benefits-list li {
+.card .card-body .card-body-left .benefits-list li {
   list-style: inherit;
   font-size: 14px;
   margin-bottom: 10px;
@@ -270,10 +270,9 @@ ul li {
   color: #2C3136;
   transition: all 0.3s ease;
 }
-.card .btn-container a:first-of-type {
-  margin-bottom: 10px;
-}
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle {
   background-color: #fff;
   border-color: #2C3136;
   color: #2C3136;
@@ -290,7 +289,6 @@ ul li {
 /* Content on-body */
 .content_1 .on-body {
   position: relative;
-  margin-bottom: 160px;
 }
 .content_1 .on-body img {
   height: auto;
@@ -356,10 +354,6 @@ ul li {
   top: 66%;
   right: 35%;
 }
-.clickable-section-circle.owb.active,
-.clickable-section-circle.iwb.active {
-  color: #fff;
-}
 /* Content off-body */
 .content_2 .off-body-container {
   display: flex;
@@ -404,7 +398,7 @@ ul li {
 .content_2 .off-body-container .icon-container:hover {
   cursor: pointer;
 }
-.content_2 .off-body-container .icon-container  p {
+.content_2 .off-body-container .icon-container p {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
@@ -426,6 +420,12 @@ ul li {
   border-radius: 0;
   margin: 0 auto;
 }
+.content_3 .card .card-inner-all {
+  padding: 0 1.75rem;
+}
+.content_3 .card .card-body {
+  padding: 1.25rem 0;
+}
 .content_3 .card .card-header {
   background-color: transparent;
   padding-left: 0;
@@ -436,9 +436,13 @@ ul li {
 .content_3 .card .card-text {
   padding-right: 10px;
 }
+.content_3 .card .card-header button {
+  padding-left: 0;
+}
 .content_3 .card .card-header button span,
 .content_3 .card .card-header button i {
-  color: #707070;
+  font-size: 18px;
+  color: #2C3136;
   font-weight: bold;
   pointer-events: none;
 }
@@ -449,7 +453,7 @@ ul li {
   box-shadow: none;
 }
 .content_3 .card .img-container {
-  height: 300px;
+  height: 400px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -472,8 +476,9 @@ ul li {
 }
 .pulse {
   position: absolute;
-  top: 7px;
-  left: 7px;
+  left: 0;
+  right: 0;
+  margin: auto;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -651,7 +656,7 @@ ul li {
   .content_3 .card .btn-container {
     margin: 0 auto;
     width: 50%;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     float: none;
   }
   .carousel-item .change-holster {
@@ -670,10 +675,6 @@ ul li {
   }
   .content_3  {
     padding: 0 15px;
-  }
-  .pulse {
-    top: 12px;
-    left: 12px;
   }
 }
 /* Tablet */
@@ -753,13 +754,16 @@ ul li {
     padding: 0;
   }
   .nav.nav-tabs .nav-item:nth-of-type(3) {
-    padding: 0 2px 0;
+    padding: 0 15px 0;
   }
   .nav-link {
     padding: .5rem 1rem .25rem;
   }
   .content_3 .card .btn-container {
     width: 100%;
+  }
+  #onBodyCarousel .carousel-item:nth-of-type(1) {
+    height: 421px;
   }
   #onBodyCarousel .carousel-inner .card,
   #offBodyCarousel .carousel-inner .card  {
@@ -774,7 +778,7 @@ ul li {
     flex-direction: column;
   }
   .carousel-item .card .card-body {
-    max-height: 120px;
+    max-height: 130px;
     overflow: hidden;
     padding-bottom: 16px;
     transition:  max-height 0.3s ease-out;
@@ -783,15 +787,24 @@ ul li {
     margin-bottom: 75px !important;
   }
   .carousel-item .card.more-active .card-body {
-    max-height: 500px;
+    max-height: 550px;
     transition:  max-height 0.3s ease-in;
+  }
+  .carousel-item .card .read-more-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
   }
   .carousel-item .card .read-more {
     display: block;
-    color: #878C91;
-    text-align: center;
+    color: #2C3136;
     font-weight: bold;
-    margin-top: 10px;
+    margin: -2px 5px 0 0;
+  }
+  .carousel-item .card .read-more-container i.fa-chevron-down,
+  .carousel-item .card .read-more-container i.fa-chevron-up {
+    margin-top: -5px;
   }
   .carousel-item .card .card-body .card-body-inner {
     flex-direction: column;
@@ -808,10 +821,11 @@ ul li {
   }
   .content_1 .on-body img {
     transform: scale(2);
-    margin-top: 100px;
+    margin-top: 110px;
+    /* margin-bottom: 150px; */
   }
   .clickable-area {
-    height: 430px;
+    height: 470px;
     max-height: inherit;
     top: 0px;
   }
@@ -876,6 +890,9 @@ ul li {
   }
   .card .btn-container, .content_3 .card .btn-container {
     width: 90%;
+  }
+  .content_3 .card .card-inner-all {
+    padding: 0;
 }
 }
 @media only screen and (max-width: 375px) {
@@ -969,12 +986,23 @@ ul li {
   #search-by-gun .section-header {
     margin-bottom: 15px;
   }
+  #onBodyCarousel .carousel-inner {
+    padding: 0 15px 70px;
+    margin-bottom: -70px;
+  }
+  .content_1 .on-body img {
+    margin-top: 85px;
+  }
   .clickable-area {
-    height: 340px;
+    height: 360px;
   }
   .clickable-section-circle {
     height: 40px;
     width: 40px;
+  }
+  .pulse {
+    height: 15px;
+    width: 15px;
   }
   .clickable-section-circle.chest {
     top: 21%;
@@ -1007,12 +1035,6 @@ ul li {
   }
   .clickable-section-circle.ankle {
     bottom: 5%;
-}
-  #onBodyCarousel .carousel-inner {
-    margin-bottom: 10px;
-  }
-  .content_1 .on-body img {
-    margin-top: 80px;
   }
   .content_2 .off-body-container {
     margin-bottom: 45px;
