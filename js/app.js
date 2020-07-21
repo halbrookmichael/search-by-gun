@@ -466,6 +466,7 @@ $(document).ready(function() {
 									<div id="collapse${sectionName + i}" class="collapse card-inner-all" aria-labelledby="heading${sectionName + i}" data-parent="#${sectionName}">
 										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgYAll};"></div>
 										<div class="card-body">
+											<h5 class="card-title">${carouselCards[i].holster}</h5>
 											<div class="card-body-inner">
 												<div class="card-body-left">
 													<h5 class="text-title">Key features by Alien Gear Holsters:</h5>
@@ -474,7 +475,6 @@ $(document).ready(function() {
 													</ul>
 												</div>
 												<div class="card-body-right">
-												<h5 class="card-title">${carouselCards[i].holster}</h5>
 													<div class="carry-info">
 														<p class="card-text">${carouselCards[i].infoText}</p>
 													</div>
