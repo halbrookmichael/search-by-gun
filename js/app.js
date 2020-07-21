@@ -3,7 +3,8 @@ $(document).ready(function() {
 		{
 			img: './img/card/chest.jpg',
 			alt: '',
-			imgY: '-125px',
+			imgY: '90%',
+			imgYAll: '84%',
 			holster: 'Chest Holsters',
 			holsterClass: 'chest',
 			class: 'active',
@@ -16,7 +17,8 @@ $(document).ready(function() {
 		{
 			img: './img/card/shoulder.jpg',
 			alt: '',
-			imgY: '-105px',
+			imgY: '80%',
+			imgYAll: '70%',
 			holster: 'Shoulder Holsters',
 			holsterClass: 'shoulder',
 			infoText: 'Shoulder holsters use a harness to suspend the firearm over the shoulder, keeping it placed under the arm. They can be carried open or concealed, depending on if the holster has a low enough profile against the body. Adjustability and comfort are critical, but having proper retention against the firearm is the most important. As a result, soft, “one-size-fits-all” holster shells should ultimately be avoided.',
@@ -29,6 +31,7 @@ $(document).ready(function() {
 			img: './img/card/belly.jpg',
 			alt: '',
 			imgY: 0,
+			imgYAll: '54%',
 			holster: 'Belly Band Holsters',
 			holsterClass: 'belly',
 			imgClass: 'belly-img',
@@ -41,7 +44,8 @@ $(document).ready(function() {
 		{
 			img: './img/card/appendix.jpg',
 			alt: '',
-			imgY: '-60px',
+			imgY: '55%',
+			imgYAll: '55%',
 			holster: 'Appendix Holsters',
 			holsterClass: 'appendix',
 			infoText: 'Appendix holsters are a type of IWB (inside the waistband) holster, but are optimized for being carried in front of the body. Appendix carry has gained a lot of popularity in recent years, and for good reasons. Access is fast, and with the right holster and gun for the right person, appendix carry is very comfortable. Some people find it doesn\'t work for them based on body type and their typical sitting position, but those that do tend to prefer appendix carry to any other method of concealed carry.',
@@ -53,7 +57,8 @@ $(document).ready(function() {
 		{
 			img: './img/card/pocket.jpg',
 			alt: '',
-			imgY: '-80px',
+			imgY: '45%',
+			imgYAll: '45%',
 			holster: 'Pocket Holsters',
 			holsterClass: 'pocket',
 			infoText: 'Pocket holsters are an absolute necessity if you want to carry a pistol in your pocket. The trigger guard must be protected to ensure safety while carrying, as pocket carry without a holster can lead to an accidental discharge. Therefore, make sure to choose a pocket holster with a rigid material covering the trigger guard. A good pocket holster will also have a “pocket catch”, which snags in the pocket and lets the gun pull free from the holster on the draw.',
@@ -65,7 +70,8 @@ $(document).ready(function() {
 		{
 			img: './img/card/ankle.jpg',
 			alt: '',
-			imgY: 0,
+			imgY: '24%',
+			imgYAll: '24%',
 			holster: 'Ankle Holsters',
 			holsterClass: 'ankle',
 			infoText: 'Ankle holsters wrap around the lower leg and/or the foot so you can cover the gun and holster with your pants. Ankle carry has most commonly been known for its use with law enforcement by providing a space for a backup gun, but it has since gained popularity with civilian carriers for everyday use. Holster selection is crucial, as it needs to be comfortable enough to wear with your normal footwear, secure enough to keep the pistol holstered while walking, but also practical enough to easily access the weapon when necessary.',
@@ -77,7 +83,8 @@ $(document).ready(function() {
 		{
 			img: './img/card/owb.jpg',
 			alt: '',
-			imgY: '-80px',
+			imgY: '52%',
+			imgYAll: '52%',
 			holster: 'OWB Holsters',
 			holsterClass: 'owb',
 			text: 'OWB',
@@ -90,8 +97,8 @@ $(document).ready(function() {
 		{
 			img: './img/card/iwb.jpg',
 			alt: '',
-			imgY: '-68px',
-			imgYMobile: '-68px',
+			imgY: '55%',
+			imgYAll: '55%',
 			holster: 'IWB Holsters',
 			holsterClass: 'iwb',
 			text: 'IWB',
@@ -105,7 +112,8 @@ $(document).ready(function() {
 		{
 			img: './img/card/leg.jpg',
 			alt: '',
-			imgY: '-100px',
+			imgY: '62%',
+			imgYAll: '84%',
 			holster: 'Drop-Leg Holsters',
 			holsterClass: 'drop-leg',
 			infoText: 'Drop leg holsters locate the firearm on the upper thigh, giving the user fast access if needed but freeing up the belt.  By providing the user ability for more dynamic movements, it\'s the perfect open carry solution for range days, hiking, tactical training and more. Firearm safety during these kinds of activities is extremely important so users should avoid holsters with soft shells and one-size-fits-all designs.',
@@ -120,27 +128,19 @@ $(document).ready(function() {
 		{
 			img: './img/card/home-defense.jpg',
 			alt: '',
-			imgY: '-110px',
+			imgY: '75%',
+			imgYAll: '72%',
 			holster: 'Holster Mounts',
 			infoText: 'A holster mount is used to attach a holster to a desired surface. There are a number of different methods, including the use hook and loop fabric, hard mounts that are drilled into a surface, and less invasive systems that use straps. In all cases, make sure to use a holster that offers adequate trigger guard protection and sufficient retention so the firearm is securely held in the holster.',
 			benefit: ['Multiple mounting systems for choice of attachment to chosen surface', 'Custom-molded retention shells for secure retention', 'Non-hardware options available'],
 			btnLabel: 'Shop Holster Mounts',
 			btnLink: 'https://aliengearholsters.com/car-holsters.html'
 		},
-		// {
-		// 	img: './img/card/vehicle.jpg',
-		// 	alt: '',
-		// 	imgY: '-80px',
-		// 	holster: 'Vehicle Holsters',
-		// 	infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them easy to conceal. The typical user will place the holster somewhere between the point of the hip and the small of the back depending on the preference of the wearer.',
-		// 	benefit: ['Compatible with a multitude of different straps including range bags, duffle bags etc',	'Custom-molded for your make and model pistol, with adjustable retention', 'Adjustable cant angle', 'Secure clamp locks to straps between 2-3 inches wide'],
-		// 	btnLabel: 'Shop Vehicle Holsters',
-		// 	btnLink: 'https://aliengearholsters.com/car-holsters.html'
-		// },
 		{
 			img: './img/card/backpack.jpg',
 			alt: '',
-			imgY: '-75px',
+			imgY: '50%',
+			imgYAll: '50%',
 			holster: 'Backpack Holsters',
 			infoText: 'Backpack holsters are made to be used while wearing a backpack, such as if out hiking, backcountry hunting or any other instance when you might be wearing a backpack and can\'t get to a gun on the waist. Being able to place the holster on the backpack, with a secure mount and a secure holster, keeps the pistol safely holstered and still accessible in an emergency. ',
 			benefit: ['Comfortable', 'Low-Profile'],
@@ -150,7 +150,8 @@ $(document).ready(function() {
 		{
 			img: './img/card/molle.jpg',
 			alt: '',
-			imgY: '-75px',
+			imgY: '45%',
+			imgYAll: '50%',
 			holster: 'MOLLE',
 			infoText: 'MOLLE holsters connect to the common material type found in tactical and military gear which feature rows of heavy-duty webbing stitched on to bags, vests, and belts. These holsters weave through the webbing and allow the user to add a holster to their existing gear. Most holsters in this class are made of stiff cloth with little retention or security which is less than ideal in the settings in which they are used.',
 			benefit: ['Two-prong rigid adapter instead of fabric loops with locking cap for secure attachment', 'Custom-molded holster shell carries more securely than cloth holsters', 'Adjustable retention and cant'],
@@ -194,7 +195,8 @@ $(document).ready(function() {
 				toggleActiveTab(2);
 			}
 
-			onSectionClick(elTargetClass);
+			if(elTargetClass.includes('clickable-section-circle') || elTargetClass.includes('icon-container'))
+				onSectionClick(elTargetClass);
 
 			if(elTargetClass.includes('change-holster')) {
 				el.preventDefault();
@@ -204,6 +206,11 @@ $(document).ready(function() {
 
 			if(elTargetClass.includes('read-more'))
 				toggleReadMore(elTarget, false);
+			
+			if(elTargetClass.includes('btn btn-link')) {
+				let currentChevron = elTarget.firstChild.nextSibling;
+				updateChevron(currentChevron);
+			}
 		}
 	});
 	$(window).resize(function() {
@@ -424,7 +431,7 @@ $(document).ready(function() {
 													</div>
 												</div>
 												<div class="card-body-right">
-													<p>Key features by Alien Gear Holsters:</p>
+													<h5 class="text-title">Key features by Alien Gear Holsters:</h5>
 													<ul class="benefits-list">
 														${addHolsterBenefits(carouselCards[i].benefit)}
 													</ul>
@@ -456,15 +463,18 @@ $(document).ready(function() {
 									</div>
 
 									<div id="collapse${sectionName + i}" class="collapse" aria-labelledby="heading${sectionName + i}" data-parent="#${sectionName}">
-										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgY};"></div>
+										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgYAll};"></div>
 										<div class="card-body">
 											<div class="card-body-inner">
 												<div class="card-body-left">
 													<h5 class="card-title">${carouselCards[i].holster}</h5>
-													<p class="card-text">${carouselCards[i].infoText}</p>
+													<div class="">
+														<h5 class="text-title mb-1">What is it?</h5>
+														<p class="card-text">${carouselCards[i].infoText}</p>
+													</div>
 												</div>
 												<div class="card-body-right">
-													<p>Key features by Alien Gear Holsters:</p>
+													<h5 class="text-title">Key features by Alien Gear Holsters:</h5>
 													<ul class="benefits-list">
 														${addHolsterBenefits(carouselCards[i].benefit)}
 													</ul>
@@ -498,6 +508,7 @@ $(document).ready(function() {
 			updateClickedSection('.iwb', '#onBodyCarousel', 7);
 			updateClickedSection('.icon-container.home-carry', '#offBodyCarousel', 0);
 			$('#content').addClass('container');
+			$('.clickable-section-circle.iwb').addClass('active');
 		}	
 		else {
 			removeAllClickedItems();
@@ -508,8 +519,7 @@ $(document).ready(function() {
 		}
 	}
 	function onSectionClick(elTargetClass) {
-		removeAllClickedItems();
-		console.log('hello')
+		
 		switch(elTargetClass) {
 			case 'clickable-section-circle chest':
 				if(currentLayout != 'mobile')
@@ -592,6 +602,7 @@ $(document).ready(function() {
 		}
 	}
 	function updateClickedSection(section, carousel, slide) {
+		removeAllClickedItems();
 		$(section).addClass('active');
 		$(carousel).carousel(slide);
 	}
@@ -681,5 +692,20 @@ $(document).ready(function() {
     while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
     }
+	}
+	function updateChevron(currentChevron) {
+		let allChevrons = document.querySelectorAll('.card .card-header button i');
+
+		if(currentChevron.classList.contains('fa-chevron-down')) {
+			for(let i = 0;i < allChevrons.length;i ++) {
+				allChevrons[i].classList.remove('fa-chevron-down');
+			}
+		}
+		else {
+			for(let i = 0;i < allChevrons.length;i ++) {
+				allChevrons[i].classList.remove('fa-chevron-down');
+			}
+			currentChevron.classList.add('fa-chevron-down');
+		}
 	}
 });

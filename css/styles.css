@@ -37,6 +37,9 @@ body {
 ul li {
   list-style: none;
 }
+.btn-link:hover {
+  text-decoration: none;
+}
 
 /* Nav */
 .navbar {
@@ -270,6 +273,12 @@ ul li {
 .card .btn-container a:first-of-type {
   margin-bottom: 10px;
 }
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  background-color: #fff;
+  border-color: #2C3136;
+  color: #2C3136;
+  transition: all 0.3s ease;
+}
 /* Content */
 .content {
   display: none;
@@ -424,6 +433,9 @@ ul li {
   border: none;
   outline: none;
 }
+.content_3 .card .card-text {
+  padding-right: 10px;
+}
 .content_3 .card .card-header button span,
 .content_3 .card .card-header button i {
   color: #707070;
@@ -437,7 +449,7 @@ ul li {
   box-shadow: none;
 }
 .content_3 .card .img-container {
-  height: 300px;
+  height: 400px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -445,6 +457,10 @@ ul li {
 .content_3 .card .card-body-right .benefits-list {
   padding-left: 20px;
 }
+.content_3 .card .btn-container {
+  width: 30%;
+}
+/* Utility */
 .fixed {
   width: 100%;
   height: auto;
@@ -456,8 +472,8 @@ ul li {
 }
 .pulse {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 7px;
+  left: 7px;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -556,7 +572,7 @@ ul li {
   }
   #onBodyCarousel .carousel-inner .card .img-container,
   #offBodyCarousel .carousel-inner .card .img-container {
-    height: 225px;
+    height: 280px;
   }
   .carousel-item .card .card-body {
     padding: 16px 16px;
@@ -638,7 +654,7 @@ ul li {
   }
   .content_3 .card .btn-container {
     margin: 0 auto;
-    max-width: 550px;
+   width: 50%;
     padding-bottom: 30px;
   }
   .carousel-item .change-holster {
@@ -657,6 +673,10 @@ ul li {
   }
   .content_3  {
     padding: 0 15px;
+  }
+  .pulse {
+    top: 10px;
+    left: 10px;
   }
 }
 /* Tablet */
@@ -744,20 +764,18 @@ ul li {
   }
   .nav-link {
     padding: .5rem 1rem .25rem;
-}
+  }
+  .content_3 .card .btn-container {
+    width: 100%;
+  }
   #onBodyCarousel .carousel-inner .card,
   #offBodyCarousel .carousel-inner .card  {
     padding-bottom: 16px;
   }
   #onBodyCarousel .carousel-inner .card .img-container,
-  #offBodyCarousel .carousel-inner .card .img-container {
+  #offBodyCarousel .carousel-inner .card .img-container,
+  .content_3 .card .img-container {
     height: 145px;
-  }
-  .card .img-container {
-    background-position: center center !important;
-  }
-  .card .img-container.belly-img {
-    background-position: right center !important;
   }
   .card .card-body .card-body-inner {
     flex-direction: column;
