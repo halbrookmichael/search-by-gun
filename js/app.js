@@ -669,7 +669,9 @@ $(document).ready(function() {
 			let y = window.scrollY;
 			let h = window.innerHeight;
 
-			if(y >= 280 && h == lg) 
+			if(y >= 0 && !card.classList.contains('more-active'))
+				container.classList.remove('fixed');
+			else if(y >= 280 && h == lg) 
 				container.classList.remove('fixed');
 			else if(y >= 450 && h == md)
 				container.classList.remove('fixed');
