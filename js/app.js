@@ -632,6 +632,7 @@ $(document).ready(function() {
 		}
 	}
 	function toggleReadMore(readMoreTarget, closeAll) {
+		let container = $(readMoreTarget).parent();
 		let currentCard = $(readMoreTarget).parent().parent();
 		let arrow = $(readMoreTarget).next();
 
@@ -645,20 +646,19 @@ $(document).ready(function() {
 				$(readMoreTarget).text('Read Less');
 				arrow.removeClass('fa-chevron-down');
 				arrow.addClass('fa-chevron-up');
+				stickyBtnContainer(readMoreTarget)
 			}
 			else {
 				$(readMoreTarget).text('Read More');
 				arrow.removeClass('fa-chevron-up');
 				arrow.addClass('fa-chevron-down');
+				container.removeClass('fixed');
 			}
-
-			stickyBtnContainer(readMoreTarget)
 		}
 	}
 	function stickyBtnContainer(readMoreTarget) {
 		let container = readMoreTarget.parentElement;
 		let card = readMoreTarget.parentElement.parentElement;
-		let arrow = $(readMoreTarget).next();
 		
 		container.classList.toggle('fixed');
 		
