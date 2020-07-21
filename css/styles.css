@@ -449,7 +449,7 @@ ul li {
   box-shadow: none;
 }
 .content_3 .card .img-container {
-  height: 400px;
+  height: 300px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -560,7 +560,7 @@ ul li {
   }
   #onBodyCarousel .carousel-inner,
   #offBodyCarousel .carousel-inner  {
-    padding: 0 45px;
+    padding: 0 15px;
     width: 100%;
     max-width: 100%;
   }
@@ -571,7 +571,8 @@ ul li {
     padding: 0;
   }
   #onBodyCarousel .carousel-inner .card .img-container,
-  #offBodyCarousel .carousel-inner .card .img-container {
+  #offBodyCarousel .carousel-inner .card .img-container,
+  .content_3 .card .img-container {
     height: 280px;
   }
   .carousel-item .card .card-body {
@@ -646,16 +647,12 @@ ul li {
   .content_2 .off-body-container .icon-container.accessories img {
     width: 12.5%;
   }
-  .card .btn-container {
-    text-align: center;
-    width: 100%;
-    padding: 0 16px;
-    float: none;
-  }
+  .card .btn-container,
   .content_3 .card .btn-container {
     margin: 0 auto;
-   width: 50%;
+    width: 50%;
     padding-bottom: 30px;
+    float: none;
   }
   .carousel-item .change-holster {
     margin-bottom: 15px;
@@ -675,16 +672,12 @@ ul li {
     padding: 0 15px;
   }
   .pulse {
-    top: 10px;
-    left: 10px;
+    top: 12px;
+    left: 12px;
   }
 }
 /* Tablet */
 @media only screen and (max-width: 768px) {
-  #onBodyCarousel .carousel-inner,
-  #offBodyCarousel .carousel-inner  {
-    padding: 0 30px;
-  }
   .content_1 .on-body img {
     transform: scale(1.25);
     margin-top: 40px;
@@ -730,7 +723,7 @@ ul li {
 /* Mobile */
 @media only screen and (max-width: 568px) {
   #search-by-gun .container {
-    padding: 0 30px;
+    padding: 0 15px;
   }
   .navbar .upper {
     flex-wrap: wrap;
@@ -865,11 +858,8 @@ ul li {
     right: 20%;
   }
   #onBodyCarousel .carousel-inner {
-    padding: 0 30px 110px;
+    padding: 0 15px 110px;
     margin-bottom: -110px;
-  }
-  #offBodyCarousel .carousel-inner  {
-    padding: 0 30px;
   }
   .content_2 .off-body-container .icon-container img {
     width: 40%;
@@ -884,6 +874,9 @@ ul li {
   .carousel-item .card .card-body .card-text {
     font-size: 14px;
   }
+  .card .btn-container, .content_3 .card .btn-container {
+    width: 90%;
+}
 }
 @media only screen and (max-width: 375px) {
   .nav .nav-item a {
@@ -1016,14 +1009,10 @@ ul li {
     bottom: 5%;
 }
   #onBodyCarousel .carousel-inner {
-    padding: 0 20px;
     margin-bottom: 10px;
   }
   .content_1 .on-body img {
     margin-top: 80px;
-  }
-  #offBodyCarousel .carousel-inner {
-    padding: 0 20px;
   }
   .content_2 .off-body-container {
     margin-bottom: 45px;

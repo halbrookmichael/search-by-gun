@@ -202,6 +202,7 @@ $(document).ready(function() {
 				el.preventDefault();
 				$('#onBodyCarousel').carousel(0);
 				$('#offBodyCarousel').carousel(0);
+				removeAllClickedItems();
 			}
 
 			if(elTargetClass.includes('read-more'))
@@ -516,6 +517,7 @@ $(document).ready(function() {
 			$('#onBodyCarousel').carousel(0);
 			$('#content').removeClass('container');
 			updateClickedSection('.icon-container.home-carry','#offBodyCarousel', 0);
+			$('.icon-container.home-carry').removeClass('active');
 		}
 	}
 	function onSectionClick(elTargetClass) {
