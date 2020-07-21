@@ -439,10 +439,8 @@ $(document).ready(function() {
 											</div>
 										</div>
 										<div class="fixed-container">
-											<div class="read-more-container">
-												<p class="read-more">Read More</p>
+												<span class="read-more">Read More</span>
 												<i class="fa fa-chevron-down" aria-hidden="true"></i>
-											</div>
 											<div class="btn-container">
 												<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
 											</div>
@@ -634,7 +632,8 @@ $(document).ready(function() {
 		}
 	}
 	function toggleReadMore(readMoreTarget, closeAll) {
-		let currentCard = $(readMoreTarget).parent().parent().parent();
+		let currentCard = $(readMoreTarget).parent().parent();
+		let arrow = $(readMoreTarget).next();
 
 		if(closeAll)
 			$('.card').removeClass('more-active');
@@ -644,21 +643,22 @@ $(document).ready(function() {
 
 			if($(currentCard).hasClass('more-active')) {
 				$(readMoreTarget).text('Read Less');
-				$(readMoreTarget).next().removeClass('fa-chevron-down');
-				$(readMoreTarget).next().addClass('fa-chevron-up');
+				arrow.removeClass('fa-chevron-down');
+				arrow.addClass('fa-chevron-up');
 			}
 			else {
 				$(readMoreTarget).text('Read More');
-				$(readMoreTarget).next().removeClass('fa-chevron-up');
-				$(readMoreTarget).next().addClass('fa-chevron-down');
+				arrow.removeClass('fa-chevron-up');
+				arrow.addClass('fa-chevron-down');
 			}
 
 			stickyBtnContainer(readMoreTarget)
 		}
 	}
 	function stickyBtnContainer(readMoreTarget) {
-		let container = readMoreTarget.parentElement.parentElement;
-		let card = readMoreTarget.parentElement.parentElement.parentElement;
+		let container = readMoreTarget.parentElement;
+		let card = readMoreTarget.parentElement.parentElement;
+		let arrow = $(readMoreTarget).next();
 		
 		container.classList.toggle('fixed');
 		
@@ -674,8 +674,8 @@ $(document).ready(function() {
 			else if(y <= 200 && card.classList.contains('more-active')) {
 				container.classList.remove('fixed');
 				card.classList.remove('more-active');
-				$(readMoreTarget).next().removeClass('fa-chevron-up');
-				$(readMoreTarget).next().addClass('fa-chevron-down');
+				arrow.removeClass('fa-chevron-up');
+				arrow.addClass('fa-chevron-down');
 				$(readMoreTarget).text('Read More');
 			}
 			else if(y >= 280 && h == lg) 
