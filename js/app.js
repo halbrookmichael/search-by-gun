@@ -423,6 +423,7 @@ $(document).ready(function() {
 									<div class="card">
 										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgY};"></div>
 										<div class="card-body">
+											<h5 class="card-title">${carouselCards[i].holster}</h5>
 											<div class="card-body-inner">
 												<div class="card-body-left">
 													<h5 class="text-title">Key features by Alien Gear Holsters:</h5>
@@ -431,7 +432,6 @@ $(document).ready(function() {
 													</ul>
 												</div>
 												<div class="card-body-right">
-												<h5 class="card-title">${carouselCards[i].holster}</h5>
 													<div class="carry-info">
 														<p class="card-text">${carouselCards[i].infoText}</p>
 													</div>
@@ -440,7 +440,7 @@ $(document).ready(function() {
 										</div>
 										<div class="fixed-container">
 											<div class="read-more-container">
-												<p class="read-more">Carry Details</p>
+												<p class="read-more">Read More</p>
 												<i class="fa fa-chevron-down" aria-hidden="true"></i>
 											</div>
 											<div class="btn-container">
@@ -643,12 +643,12 @@ $(document).ready(function() {
 			$(currentCard).toggleClass('more-active');
 
 			if($(currentCard).hasClass('more-active')) {
-				$(readMoreTarget).text('Close Details');
+				$(readMoreTarget).text('Read Less');
 				$(readMoreTarget).next().removeClass('fa-chevron-down');
 				$(readMoreTarget).next().addClass('fa-chevron-up');
 			}
 			else {
-				$(readMoreTarget).text('Carry Details');
+				$(readMoreTarget).text('Read More');
 				$(readMoreTarget).next().removeClass('fa-chevron-up');
 				$(readMoreTarget).next().addClass('fa-chevron-down');
 			}
@@ -676,7 +676,7 @@ $(document).ready(function() {
 				card.classList.remove('more-active');
 				$(readMoreTarget).next().removeClass('fa-chevron-up');
 				$(readMoreTarget).next().addClass('fa-chevron-down');
-				$(readMoreTarget).text('Carry Details');
+				$(readMoreTarget).text('Read More');
 			}
 			else if(y >= 280 && h == lg) 
 				container.classList.remove('fixed');

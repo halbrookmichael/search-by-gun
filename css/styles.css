@@ -213,9 +213,13 @@ ul li {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.card .card-title,
-.card .text-title {
+.card .card-title {
   font-size: 21px;
+  font-weight: bold;
+  color: #2C3136;
+}
+.card .text-title {
+  font-size: 16px;
   font-weight: bold;
   color: #2C3136;
   margin: 0 0 15px;
@@ -223,8 +227,14 @@ ul li {
 .carousel-item .card .card-body {
   padding: 20px 0;
 }
-.carousel-item .card .read-more {
+.carousel-item .card .read-more-container {
   display: none;
+}
+.carousel-item .card .read-more {
+  display: block;
+  color: #2C3136;
+  font-weight: bold;
+  margin: -2px 5px 0 0;
 }
 .card .card-body .card-body-inner {
   display: flex;
@@ -795,12 +805,6 @@ ul li {
     align-items: center;
     justify-content: center;
     height: 40px;
-  }
-  .carousel-item .card .read-more {
-    display: block;
-    color: #2C3136;
-    font-weight: bold;
-    margin: -2px 5px 0 0;
   }
   .carousel-item .card .read-more-container i.fa-chevron-down,
   .carousel-item .card .read-more-container i.fa-chevron-up {
