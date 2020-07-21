@@ -440,7 +440,6 @@ $(document).ready(function() {
 										</div>
 										<div class="fixed-container">
 												<span class="read-more">Read More</span>
-												<i class="fa fa-chevron-down" aria-hidden="true"></i>
 											<div class="btn-container">
 												<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
 											</div>
@@ -634,7 +633,6 @@ $(document).ready(function() {
 	function toggleReadMore(readMoreTarget, closeAll) {
 		let container = $(readMoreTarget).parent();
 		let currentCard = $(readMoreTarget).parent().parent();
-		let arrow = $(readMoreTarget).next();
 
 		if(closeAll)
 			$('.card').removeClass('more-active');
@@ -644,14 +642,10 @@ $(document).ready(function() {
 
 			if($(currentCard).hasClass('more-active')) {
 				$(readMoreTarget).text('Read Less');
-				arrow.removeClass('fa-chevron-down');
-				arrow.addClass('fa-chevron-up');
 				stickyBtnContainer(readMoreTarget)
 			}
 			else {
 				$(readMoreTarget).text('Read More');
-				arrow.removeClass('fa-chevron-up');
-				arrow.addClass('fa-chevron-down');
 				container.removeClass('fixed');
 			}
 		}

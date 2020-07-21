@@ -230,9 +230,6 @@ ul li {
 .carousel-item .card .read-more {
   display: none;
 }
-.carousel-item .card .fixed-container i {
-  display: none;
-}
 .card .card-body .card-body-inner {
   display: flex;
   justify-content: space-between;
@@ -898,10 +895,23 @@ ul li {
     font-weight: bold;
     text-align: center;
     padding: 20px 0;
+    width: 100%;
   }
-  .carousel-item .card .fixed-container i {
-    display: inline-block;
-    pointer-events: none;
+  .carousel-item .card .read-more::after {
+    content: '\f078';
+    font-family: fontAwesome;
+    color: #2C3136;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 5px;
+  }
+  .carousel-item .card .fixed-container.fixed .read-more::after {
+    content: '\f077';
+    font-family: fontAwesome;
+    color: #2C3136;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 5px;
   }
 }
 @media only screen and (max-width: 375px) {
