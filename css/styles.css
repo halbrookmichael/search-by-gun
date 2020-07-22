@@ -224,6 +224,11 @@ ul li {
   color: #2C3136;
   margin: 0 0 15px;
 }
+.card img.most-popular {
+  height: 43px;
+  width: 70px;
+  align-self: flex-start;
+}
 .carousel-item .card .card-body {
   padding: 20px 0;
 }
@@ -483,10 +488,10 @@ ul li {
   left: 0;
   right: 0;
   margin: auto;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
-  animation: pulse 1.25s 2;
+  animation: pulse 1.5s 4;
   pointer-events: none;
 }
 @keyframes pulse {
@@ -758,7 +763,7 @@ ul li {
     padding: 0;
   }
   .nav.nav-tabs .nav-item:nth-of-type(3) {
-    padding: 0 15px 0;
+    padding: 0 25px 0;
   }
   .nav-link {
     padding: .5rem 1rem .25rem;
@@ -770,8 +775,8 @@ ul li {
     height: 421px;
   }
   #onBodyCarousel .carousel-inner .card,
-  #offBodyCarousel .carousel-inner .card  {
-    padding-bottom: 16px;
+  #offBodyCarousel .carousel-inner .card {
+    margin-bottom: 25px;
   }
   #onBodyCarousel .carousel-inner .card .img-container,
   #offBodyCarousel .carousel-inner .card .img-container,
@@ -781,25 +786,8 @@ ul li {
   .card .card-body .card-body-inner {
     flex-direction: column;
   }
-  .carousel-item .card .card-body {
-    max-height: 130px;
-    overflow: hidden;
-    padding-bottom: 16px;
-    transition:  max-height 0.3s ease-out;
-  }
-  .carousel-item .card.more-active {
-    margin-bottom: 75px !important;
-  }
-  .carousel-item .card.more-active .card-body {
-    max-height: 550px;
-    transition:  max-height 0.3s ease-in;
-  }
-  .carousel-item .card .read-more-container i.fa-chevron-down,
-  .carousel-item .card .read-more-container i.fa-chevron-up {
-    margin-top: -5px;
-  }
   .carousel-item .card .card-body .card-body-inner {
-    flex-direction: column;
+    margin-bottom: 0;
   }
   .card .card-body .card-body-left,
   .card .card-body .card-body-right {
@@ -810,6 +798,14 @@ ul li {
   }
   .carousel-item .card .card-body .card-body-right ul {
     padding: 0 0 0 20px;
+  }
+  .carousel-item .card .btn-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .5);
+    width: 100%;
+    padding: 15px;
   }
   .content_1 .on-body img {
     transform: scale(2);

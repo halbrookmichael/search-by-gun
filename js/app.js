@@ -103,6 +103,7 @@ $(document).ready(function() {
 			holsterClass: 'iwb',
 			text: 'IWB',
 			pulse: 'pulse',
+			mostPopular: true,
 			infoText: 'Inside the waistband or IWB holsters tuck into the waistband and get covered up with a shirt and any other cover garments, making them the best option for concealed carry. The typical user will place the holster on the back side of their hip allowing for optimum accessibility and concealment. This is proudly our best-selling holster type and we encourage any and everyone to give it a try.',
 			benefit: ['Custom-molded retention shell securely holds the firearm', 'Holster base includes CoolVent Neoprene for all day comfort', 'Adjustable retention, cant, and ride height'],
 			btnLabel: 'Shop IWB Holsters',
@@ -205,9 +206,6 @@ $(document).ready(function() {
 				removeAllClickedItems();
 			}
 
-			if(elTargetClass.includes('read-more'))
-				toggleReadMore(elTarget, false);
-			
 			if(elTargetClass.includes('btn btn-link')) {
 				let currentChevron = elTarget.firstChild.nextSibling;
 				updateChevron(currentChevron);
@@ -235,12 +233,6 @@ $(document).ready(function() {
 				currentLayout = 'mobile';
 				removeAllChildNodes(contentParent);
 				updatePageView(currentLayout);
-				$('#onBodyCarousel').on('slide.bs.carousel', function (e) {
-					toggleReadMore(null, true);
-				});
-				$('#offBodyCarousel').on('slide.bs.carousel', function (e) {
-					toggleReadMore(null, true);
-				});
 			}
 		}
 
@@ -265,7 +257,7 @@ $(document).ready(function() {
 													<a class="nav-link off-body-tab" href="#">Off-Body Carry</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link all-tab" href="#">All Carry</a>
+													<a class="nav-link all-tab" href="#">See All</a>
 												</li>
 											</ul>
 											<div class="mobile-content">
@@ -331,7 +323,7 @@ $(document).ready(function() {
 														<a class="nav-link off-body-tab" href="#">Off-Body Carry</a>
 													</li>
 													<li class="nav-item">
-														<a class="nav-link all-tab" href="#">All Carry</a>
+														<a class="nav-link all-tab" href="#">See All</a>
 													</li>
 												</ul>
 												<img src="img/on-body.png" alt="">
@@ -355,7 +347,7 @@ $(document).ready(function() {
 														<a class="nav-link off-body-tab" href="#">Off-Body Carry</a>
 													</li>
 														<li class="nav-item">
-														<a class="nav-link all-tab" href="#">All Carry</a>
+														<a class="nav-link all-tab" href="#">See All</a>
 													</li>
 												</ul>
 												<div class="icon-container home-carry">
@@ -389,7 +381,7 @@ $(document).ready(function() {
 													<a class="nav-link off-body-tab" href="#">Off-Body Carry</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link all-tab" href="#">All Carry</a>
+													<a class="nav-link all-tab" href="#">See All</a>
 												</li>
 											</ul>
 											<div class="accordion" id="accordionOnBody">
@@ -422,6 +414,7 @@ $(document).ready(function() {
 									}
 									<div class="card">
 										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgY};"></div>
+										${carouselCards[i].mostPopular ? '<img class="most-popular" src="../img/icons/most-popular.png"/>' : ''}
 										<div class="card-body">
 											<h5 class="card-title">${carouselCards[i].holster}</h5>
 											<div class="card-body-inner">
@@ -438,11 +431,8 @@ $(document).ready(function() {
 												</div>
 											</div>
 										</div>
-										<div class="fixed-container">
-												<span class="read-more">Read More</span>
-											<div class="btn-container">
-												<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
-											</div>
+										<div class="btn-container">
+											<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
 										</div>
 									</div>
 								</div>`;
@@ -630,52 +620,52 @@ $(document).ready(function() {
 			$('.all-tab').parent().addClass('active');
 		}
 	}
-	function toggleReadMore(readMoreTarget, closeAll) {
-		let container = $(readMoreTarget).parent();
-		let currentCard = $(readMoreTarget).parent().parent();
+	// function toggleReadMore(readMoreTarget, closeAll) {
+	// 	let container = $(readMoreTarget).parent();
+	// 	let currentCard = $(readMoreTarget).parent().parent();
 
-		if(closeAll)
-			$('.card').removeClass('more-active');
+	// 	if(closeAll)
+	// 		$('.card').removeClass('more-active');
 		
-		if(readMoreTarget != null) {
-			$(currentCard).toggleClass('more-active');
+	// 	if(readMoreTarget != null) {
+	// 		$(currentCard).toggleClass('more-active');
 
-			if($(currentCard).hasClass('more-active')) {
-				$(readMoreTarget).text('Read Less');
-				stickyBtnContainer(readMoreTarget)
-			}
-			else {
-				$(readMoreTarget).text('Read More');
-				container.removeClass('fixed');
-			}
-		}
-	}
-	function stickyBtnContainer(readMoreTarget) {
-		let container = readMoreTarget.parentElement;
-		let card = readMoreTarget.parentElement.parentElement;
+	// 		if($(currentCard).hasClass('more-active')) {
+	// 			$(readMoreTarget).text('Read Less');
+	// 			stickyBtnContainer(readMoreTarget)
+	// 		}
+	// 		else {
+	// 			$(readMoreTarget).text('Read More');
+	// 			container.removeClass('fixed');
+	// 		}
+	// 	}
+	// }
+	// function stickyBtnContainer(readMoreTarget) {
+	// 	let container = readMoreTarget.parentElement;
+	// 	let card = readMoreTarget.parentElement.parentElement;
 		
-		container.classList.toggle('fixed');
+	// 	container.classList.toggle('fixed');
 		
-		$(window).scroll(function() {
-			const lg = 823;
-			const md = 667;
-			const sm = 568;
-			let y = window.scrollY;
-			let h = window.innerHeight;
+	// 	$(window).scroll(function() {
+	// 		const lg = 823;
+	// 		const md = 667;
+	// 		const sm = 568;
+	// 		let y = window.scrollY;
+	// 		let h = window.innerHeight;
 
-			if(y >= 0 && !card.classList.contains('more-active'))
-				container.classList.remove('fixed');
-			else if(y >= 350 && h == lg) 
-				container.classList.remove('fixed');
-			else if(y >= 450 && h == md)
-				container.classList.remove('fixed');
-			else if(y >= 510 && h == sm)
-				container.classList.remove('fixed');
-			else
-				container.classList.add('fixed');
+	// 		if(y >= 0 && !card.classList.contains('more-active'))
+	// 			container.classList.remove('fixed');
+	// 		else if(y >= 350 && h == lg) 
+	// 			container.classList.remove('fixed');
+	// 		else if(y >= 450 && h == md)
+	// 			container.classList.remove('fixed');
+	// 		else if(y >= 510 && h == sm)
+	// 			container.classList.remove('fixed');
+	// 		else
+	// 			container.classList.add('fixed');
 
-		});	
-	}
+	// 	});	
+	// }
 	function removeAllClickedItems() {
 		$('.clickable-section-circle').removeClass('active');
 		$('.icon-container').removeClass('active');
