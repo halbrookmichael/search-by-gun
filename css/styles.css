@@ -772,7 +772,7 @@ ul li {
     width: 100%;
   }
   #onBodyCarousel .carousel-item:nth-of-type(1) {
-    height: 421px;
+    height: 500px;
   }
   #onBodyCarousel .carousel-inner .card,
   #offBodyCarousel .carousel-inner .card {
@@ -810,7 +810,11 @@ ul li {
   .content_1 .on-body img {
     transform: scale(2);
     margin-top: 110px;
-    /* margin-bottom: 150px; */
+  }
+  #onBodyCarousel .carousel-inner .carousel-item:not(:nth-of-type(1)),
+  #offBodyCarousel .carousel-inner .carousel-item:not(:nth-of-type(1)) {
+    padding: 0 0 35px;
+    margin-bottom: 0;
   }
   .clickable-area {
     height: 470px;
