@@ -454,6 +454,7 @@ $(document).ready(function() {
 
 									<div id="collapse${sectionName + i}" class="collapse card-inner-all" aria-labelledby="heading${sectionName + i}" data-parent="#${sectionName}">
 										<div class="img-container ${carouselCards[i].imgClass ? carouselCards[i].imgClass : ''}" style="background-image: url('${carouselCards[i].img}');background-position: 0 ${carouselCards[i].imgYAll};"></div>
+										${carouselCards[i].mostPopular ? '<img class="most-popular" src="../img/icons/most-popular.png"/>' : ''}
 										<div class="card-body">
 											<h5 class="card-title">${carouselCards[i].holster}</h5>
 											<div class="card-body-inner">
