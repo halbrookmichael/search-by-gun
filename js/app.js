@@ -430,10 +430,11 @@ $(document).ready(function() {
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="btn-container">
+											<div class="btn-container">
 											<a href="${carouselCards[i].btnLink}" class="btn btn-primary">${carouselCards[i].btnLabel}</a>
 										</div>
+										</div>
+										
 									</div>
 								</div>`;
 		}

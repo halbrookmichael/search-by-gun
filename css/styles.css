@@ -230,7 +230,10 @@ ul li {
   align-self: flex-start;
 }
 .carousel-item .card .card-body {
-  padding: 20px 0;
+  height: 210px;
+  overflow-y: scroll;
+  z-index: 0;
+  padding: 20px 0 60px;
 }
 .carousel-item .card .read-more {
   display: none;
@@ -258,6 +261,15 @@ ul li {
   list-style: inherit;
   font-size: 14px;
   margin-bottom: 10px;
+}
+.carousel .card .btn-container {
+  width: 94%;
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  padding: 10px 45px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, .5);
 }
 .card .btn-container {
   width: 50%;
@@ -590,8 +602,16 @@ ul li {
     height: 280px;
   }
   .carousel-item .card .card-body {
+    height: auto;
+    overflow-y: inherit;
     padding: 16px 16px;
   }
+  /* .carousel-item .card .card-body {
+    height: 210px;
+    overflow-y: scroll;
+    z-index: 0;
+    padding: 20px 0 60px;
+  } */
   .clickable-area {
     max-height: 100%;
     top: 0;
@@ -661,11 +681,22 @@ ul li {
   .content_2 .off-body-container .icon-container.accessories img {
     width: 12.5%;
   }
-  .card .btn-container,
+  /* .carousel .card .btn-container {
+    width: 94%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    padding: 10px 45px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, .5);
+  } */
+  .carousel .card .btn-container,
   .content_3 .card .btn-container {
+    position: relative;
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
     padding-bottom: 15px;
+    background-color: transparent;
     float: none;
   }
   .carousel-item .change-holster {
